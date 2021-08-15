@@ -1,0 +1,71 @@
+@import "../../App";
+
+.header {
+  width: 100vw;
+  height: 55px;
+  background-color: $mainColor2;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 900px;
+    width: $width;
+    padding: 0 15px;
+    margin: 0 auto;
+    color: #FFFFFF;
+  }
+
+  &__logo {
+    cursor: pointer;
+    padding-top: 9px;
+    padding-bottom: 5px;
+    img {
+      width: 150px;
+      height: 35px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  .menu {
+    &__item {
+      cursor: pointer;
+      padding: 10px 13px;
+    }
+  }
+
+  &__user {
+    padding: 8px 0;
+  }
+
+  .user {
+    display: flex;
+
+    &__notifications {
+      cursor: pointer;
+      padding: 7px 13px;
+      img {
+        width: 20px;
+      }
+    }
+
+    &__name {
+        padding: 7px 13px;
+    }
+
+    &__avatar {
+      cursor: pointer;
+      padding: 0 13px;
+      height: 35px;
+
+      img {
+        width: 35px;
+        border-radius: 30px;
+      }
+    }
+  }
+
+}
