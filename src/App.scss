@@ -1,11 +1,45 @@
 $width: 930px;
 $mainColor: #F2F2F3;
-$mainColor2: #143585;
+$mainColor2: #1b3e99;
 $sublimeColor: #565656;
 $errorColor: #EA0000;
 $disabled: #4E4E4E;
 
 .App {
-  text-align: center;
+  .text-cut {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .link-default {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .page {
+    padding-top: 56px;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: $mainColor;
+
+    .section {
+      margin-bottom: 17px;
+      background: #ffffff;
+      border-radius: 5px;
+
+      &__body {
+        padding: 10px 14px;
+
+        .title {
+          text-align: start;
+          position: relative;
+          margin-bottom: 12px;
+          font-weight: 600;
+          font-size: 19px;
+        }
+      }
+    }
+  }
 }
 

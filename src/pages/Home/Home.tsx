@@ -1,0 +1,78 @@
+import React from 'react';
+import './Home.scss'
+
+
+export const Home = () => {
+    return (
+        <div className='page__inner'>
+            <div className='container'>
+                <div className='container__left-side'>
+                    <div className='section'>
+                        <div className='section__body'>
+                            <h2 className='title'>
+                                Популярное аниме текущего сезона
+                            </h2>
+                            <div className='popular-list'>
+                                {new Array(6).fill(1).map(item =>
+                                    <div className='popular-list__item item'>
+                                        <img className='item__image'
+                                             src={require("../../assets/images/animeAvatar.png").default}/>
+                                        <div className='item__name'>
+                                            Место для названия аниме
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                    <div className='info-lists'>
+                        <div className='info-lists__section section'>
+                            <div className='section__body'>
+                                <div className='title'>
+                                    Последние новости
+                                </div>
+                                <div className='info-list-items'>
+                                    {new Array(4).fill(1).map(i =>
+                                        <div className='info-list-item'>
+                                            <div className='info-list-item__text text-cut'>
+                                                Сайт закрыт не технические работы по причине долгого создания сайта
+                                                16.08.2021
+                                            </div>
+                                            <div className='info-list-item__info'>
+                                                <div className='info-list-item__user'>UserName</div>
+                                                <div className='info-list-item__date'>16.08.2021</div>
+                                            </div>
+                                        </div>)}
+                                </div>
+                                <div className='link-default'>Все новости {">"}</div>
+                            </div>
+                        </div>
+                        <div className='info-lists__section section'>
+                            <div className='section__body'>
+                                <div className='title'>
+                                    Последние темы форума
+                                </div>
+                                <div className='info-list-items'>
+                                    {new Array(4).fill(1).map(i =>
+                                        <div className='info-list-item'>
+                                            <div className='info-list-item__text text-cut'>
+                                                Тема форума
+                                            </div>
+                                            <div className='info-list-item__info'>
+                                                <div className='info-list-item__user'>UserName</div>
+                                                <div className='info-list-item__date'>16.08.2021</div>
+                                            </div>
+                                        </div>)}
+                                </div>
+                                <div className='link-default'>Все темы {">"}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='container__right-side'>
+
+                </div>
+            </div>
+        </div>
+    );
+};

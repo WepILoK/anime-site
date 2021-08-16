@@ -1,8 +1,12 @@
 @import "../../App";
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   width: 100vw;
-  height: 55px;
+  height: 56px;
   background-color: $mainColor2;
 
   &__inner {
@@ -10,7 +14,8 @@
     justify-content: space-between;
     align-items: center;
     min-width: 900px;
-    width: $width;
+    max-width: 1200px;
+    width: 100%;
     padding: 0 15px;
     margin: 0 auto;
     color: #FFFFFF;
@@ -20,6 +25,7 @@
     cursor: pointer;
     padding-top: 9px;
     padding-bottom: 5px;
+
     img {
       width: 150px;
       height: 35px;
@@ -31,34 +37,57 @@
   }
 
   .menu {
+    padding: 11px 0;
+
     &__item {
       cursor: pointer;
-      padding: 10px 13px;
+      padding: 5px 13px;
+
     }
   }
 
   &__user {
-    padding: 8px 0;
+    padding: 7.5px 0;
   }
 
   .user {
     display: flex;
 
-    &__notifications {
-      cursor: pointer;
+    &__name {
+      width: 125px;
       padding: 7px 13px;
+      text-align: end;
+    }
+
+    &__notifications {
+      position: relative;
+      cursor: pointer;
+      margin: 4px 10px;
+      padding: 5px 5px 4px 5px;
+
       img {
         width: 20px;
       }
-    }
 
-    &__name {
-        padding: 7px 13px;
+      p {
+        position: absolute;
+        text-align: center;
+        top: -6px;
+        right: -7px;
+        height: 21px;
+        width: 21px;
+        padding: 1px 0 0 0;
+        font-size: 13px;
+        font-weight: 500;
+        background-color: #000000;
+        border-radius: 15px;
+      }
     }
 
     &__avatar {
       cursor: pointer;
-      padding: 0 13px;
+      padding-left: 13px;
+      margin-top: 2px;
       height: 35px;
 
       img {
@@ -68,4 +97,10 @@
     }
   }
 
+  .hover {
+    &:hover {
+      background-color: lighten($mainColor2, 5%);
+      border-radius: 5px;
+    }
+  }
 }

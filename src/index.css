@@ -39,3 +39,18 @@ dl,
 dd {
     margin: 0;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: #c1c1c1;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: #f3f3f3;
+}
