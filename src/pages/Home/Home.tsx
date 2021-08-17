@@ -35,7 +35,7 @@ export const Home = () => {
                                     {new Array(4).fill(1).map(i =>
                                         <div className='info-list-item'>
                                             <div className='info-list-item__text text-cut'>
-                                                Сайт закрыт не технические работы по причине долгого создания сайта
+                                                Сайт закрыт на технические работы по причине долгого создания сайта
                                                 16.08.2021
                                             </div>
                                             <div className='info-list-item__info'>
@@ -65,6 +65,40 @@ export const Home = () => {
                                         </div>)}
                                 </div>
                                 <div className='link-default'>Все темы {">"}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='section'>
+                        <div className='section__header'>
+                            <div className='section__header-title'>
+                                Новые серии
+                            </div>
+                        </div>
+                        <div className='section__body'>
+                            <div className='updates'>
+                                {new Array(15).fill('').map( i =>
+                                    <div className='updates__item'>
+                                        <img className='updates__avatar'
+                                             src={require("../../assets/images/animeAvatar.png").default}/>
+                                        <div className='updates__content'>
+                                            <div className='updates__header'>
+                                                    <div className='updates__name'>
+                                                        Название аниме
+                                                    </div>
+                                                    <div className='updates__date'>
+                                                        сегодня
+                                                    </div>
+                                            </div>
+                                            <div className='updates__body'>
+                                                <div className='updates__series'>
+                                                    <div className='updates__series_number'>
+                                                        Серия 1
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

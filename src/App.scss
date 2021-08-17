@@ -1,5 +1,5 @@
 $width: 930px;
-$mainColor: #F2F2F3;
+$mainColor: #f2f2f3;
 $mainColor2: #1b3e99;
 $sublimeColor: #565656;
 $errorColor: #EA0000;
@@ -11,6 +11,7 @@ $disabled: #4E4E4E;
     text-overflow: ellipsis;
     overflow: hidden;
   }
+
   .link-default {
     color: #000000;
     text-decoration: none;
@@ -27,6 +28,16 @@ $disabled: #4E4E4E;
       margin-bottom: 17px;
       background: #ffffff;
       border-radius: 5px;
+
+      &__header {
+        min-height: 45px;
+        padding: 12px 13px;
+        border-bottom: 1px solid #e5e5e5;
+
+        &-title {
+          font-weight: 600;
+        }
+      }
 
       &__body {
         padding: 10px 14px;
