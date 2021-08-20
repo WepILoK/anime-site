@@ -76,18 +76,18 @@ export const Home = () => {
                         </div>
                         <div className='section__body'>
                             <div className='updates'>
-                                {new Array(15).fill('').map( i =>
+                                {new Array(15).fill('').map(i =>
                                     <div className='updates__item'>
                                         <img className='updates__avatar'
                                              src={require("../../assets/images/animeAvatar.png").default}/>
                                         <div className='updates__content'>
                                             <div className='updates__header'>
-                                                    <div className='updates__name'>
-                                                        Название аниме
-                                                    </div>
-                                                    <div className='updates__date'>
-                                                        сегодня
-                                                    </div>
+                                                <div className='updates__name'>
+                                                    Название аниме
+                                                </div>
+                                                <div className='updates__date'>
+                                                    сегодня
+                                                </div>
                                             </div>
                                             <div className='updates__body'>
                                                 <div className='updates__series'>
@@ -103,8 +103,27 @@ export const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className='container__right-side'>
-
+                <div className='container__right-side aside'>
+                    <div className='aside__panel'>
+                        <div className='aside__title'>
+                            Топ аниме
+                        </div>
+                        <div className='list'>
+                            {new Array(10).fill('').map(i =>
+                                <div className='anime-list-item'>
+                                    <img className='anime-list-item__image'
+                                         src={require("../../assets/images/animeAvatar.png").default}/>
+                                    <div className='anime-list-item__body'>
+                                        <div className='anime-list-item__title'>
+                                            Название аниме
+                                        </div>
+                                        <div className='anime-list-item__subtitle'>
+                                            Просмотров: {' ' + 414151141}
+                                        </div>
+                                    </div>
+                                </div>)}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -25,10 +25,14 @@ export const Layout: React.FC = ({children}) => {
                         <div className='user__name text-cut'>
                             NAme
                         </div>
-                        <div className='user__notifications hover'
+                        <div className='user__image hover'
                              onClick={toggleVisibleNotifications}>
                             <img src={require("../../assets/images/notifications.svg").default} alt='notifications'/>
-                            <p>{2}</p>
+                            <p className='text-cut'>{23}</p>
+                        </div>
+                        <div className='user__image hover'>
+                            <img src={require("../../assets/images/message.svg").default} alt='messages'/>
+                            <p className='text-cut'>{3}</p>
                         </div>
                         {visibleNotifications && (
                             <div className='user__dropdown'>
