@@ -1,16 +1,15 @@
 import React from 'react';
 import './App.scss';
-import {Header} from "./components/Header/Header";
+import {Layout} from "./components/Layout/Layout";
 import {Home} from "./pages/Home/Home";
 
 
 export const App = () => {
     return (
         <div className="App">
-            <Header/>
-            <div className='page'>
+            <Layout>
                 <Home/>
-            </div>
+            </Layout>
         </div>
     );
 }

@@ -1,0 +1,227 @@
+@import "../../App";
+
+.layout {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 56px;
+    background-color: $mainColor2;
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 900px;
+      max-width: 1200px;
+      width: 100%;
+      padding: 0 15px;
+      margin: 0 auto;
+      color: #FFFFFF;
+    }
+
+    &__logo {
+      cursor: pointer;
+      padding-top: 9px;
+      padding-bottom: 5px;
+
+      img {
+        width: 150px;
+        height: 35px;
+      }
+    }
+
+    &__menu {
+      display: flex;
+    }
+
+    .menu {
+      padding: 11px 0;
+
+      &__item {
+        cursor: pointer;
+        padding: 5px 13px;
+
+      }
+    }
+
+    &__user {
+      padding: 7.5px 0;
+    }
+
+    .user {
+      display: flex;
+      position: relative;
+
+      &__name {
+        width: 125px;
+        padding: 7px 13px;
+        text-align: end;
+      }
+
+      &__notifications {
+        position: relative;
+        cursor: pointer;
+        margin: 4px 10px;
+        padding: 5px 5px 4px 5px;
+
+        img {
+          width: 20px;
+        }
+
+        p {
+          position: absolute;
+          text-align: center;
+          top: -6px;
+          right: -7px;
+          height: 21px;
+          width: 21px;
+          padding: 1px 0 0 0;
+          font-size: 13px;
+          font-weight: 500;
+          background-color: #000000;
+          border-radius: 15px;
+        }
+      }
+
+      &__avatar {
+        cursor: pointer;
+        padding-left: 13px;
+        margin-top: 2px;
+        height: 35px;
+
+        img {
+          width: 35px;
+          border-radius: 30px;
+        }
+      }
+
+      &__dropdown {
+        position: absolute;
+        top: 50px;
+        right: 53px;
+        min-width: 350px;
+        width: 460px;
+        z-index: 10;
+        border-radius: 3px;
+        background-color: #ffffff;
+        color: #000000;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, .1);
+
+        .notifications {
+          &__header {
+            padding: 5px 10px;
+            text-align: center;
+            border-bottom: 1px solid #e5e5e5;
+          }
+
+          &__title {
+            font-weight: 700;
+            padding: 7px 0;
+            font-size: 15px;
+          }
+
+          &__content {
+            max-height: 500px;
+            overflow-y: auto;
+
+          }
+
+          &__list {
+            .notification-row {
+              .notification {
+                &-item {
+                  display: flex;
+                  padding: 10px 30px 10px 13px;
+                  cursor: pointer;
+                  border-bottom: 1px solid #e5e5e5;
+
+                  &:hover {
+                    background-color: #f5f5f5;
+                  }
+
+                  &__image {
+                    width: 50px;
+                    border-radius: 4px;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, .2)
+                  }
+
+                  &__info {
+                    padding-left: 10px;
+                  }
+
+                  &__meta {
+                    display: flex;
+                    padding-bottom: 5px;
+                  }
+
+                  &__command-name {
+                    max-width: 160px;
+                    margin-right: 5px;
+
+                  }
+
+                  &__date {
+
+                  }
+
+                  &__body {
+                  }
+
+                  &__text {
+                    display: flex;
+                  }
+
+                  &__name {
+                    max-width: 240px;
+                    margin-left: 5px;
+                    font-weight: 500;
+                    border-bottom: 1px solid rgba(0, 0, 0, .16);
+                  }
+                }
+              }
+            }
+          }
+
+          &__empty {
+            height: 100px;
+            text-align: center;
+            padding-top: 40px;
+          }
+
+          &__footer {
+            padding: 15px;
+            text-align: center;
+            border-top: 1px solid #e5e5e5;
+          }
+
+          &__button {
+            height: 31px;
+            width: 155px;
+            border-radius: 5px;
+            padding-top: 4px;
+            margin: 0 auto;
+            color: #FFFFFF;
+            cursor: pointer;
+            background-color: $mainColor2;
+
+          }
+        }
+      }
+    }
+
+    .hover {
+      transition: background-color 0.1s ease-in-out;
+      &:hover {
+        background-color: lighten($mainColor2, 5%);
+        border-radius: 5px;
+      }
+      &:active {
+        background-color: lighten($mainColor2, 8%);
+
+      }
+    }
+  }
+}
