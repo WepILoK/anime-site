@@ -106,12 +106,55 @@ export const Home = () => {
                 <div className='container__right-side aside'>
                     <div className='aside__panel'>
                         <div className='aside__title'>
+                            Мини чат
+                        </div>
+                        <div className='chat'>
+                            <div className='chat__items'>
+                                {Array(15).fill('').map(i =>
+                                    <div className='chat-item'>
+                                        <div className='chat-item__header'>
+                                            <div className='chat-item__avatar'>
+                                                <img src={require("../../assets/images/avatar.png").default}
+                                                     alt="UserAvatar"/>
+                                                <div/>
+                                            </div>
+                                            <div className='chat-item__info'>
+                                                <div className='chat-item__info_username text-cut'>
+                                                    UserName
+                                                </div>
+                                                <div className='chat-item__info_date'>
+                                                    около 2 часов назад
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='chat-item__message'>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta
+                                            itaque laudantium nemo nisi omnis, possimus velit veritatis voluptatibus.
+                                            Aliquam animi beatae eveniet ipsa maxime recusandae sapiente sit, unde
+                                            veritatis!
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                            <div className='chat-send'>
+                                <textarea className='chat-send__area'
+                                          maxLength={250}
+                                          placeholder='Введите сообщение'/>
+                                <button className='chat-send__button'>
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='aside__panel'>
+                        <div className='aside__title'>
                             Топ аниме
                         </div>
                         <div className='list'>
                             {new Array(10).fill('').map(i =>
                                 <div className='anime-list-item'>
                                     <img className='anime-list-item__image'
+                                         alt='animeAvatar'
                                          src={require("../../assets/images/animeAvatar.png").default}/>
                                     <div className='anime-list-item__body'>
                                         <div className='anime-list-item__title'>

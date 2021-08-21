@@ -43,7 +43,7 @@ export const Layout: React.FC = ({children}) => {
                                         </div>
                                     </div>
                                     <div className='notifications__content'>
-                                        {false
+                                        {true
                                             ? (<div className='notifications__list'>
                                                 {new Array(10).fill('').map(i =>
                                                     <div className='notification-row'>

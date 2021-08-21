@@ -160,11 +160,20 @@
           background: #ffffff;
           border-radius: 4px;
           margin-bottom: 17px;
+
           .list {
+            padding: 0 10px;
+
             .anime-list-item {
               display: flex;
-              padding: 10px;
+              padding: 10px 0;
               cursor: pointer;
+              border-bottom: 1px solid #e5e5e5;
+
+              &:last-child {
+                border: none;
+              }
+
               &__image {
                 width: 70px;
               }
@@ -174,11 +183,128 @@
                 flex-direction: column;
                 padding-left: 12px;
               }
+
               &__title {
                 font-weight: 600;
               }
+
               &__subtitle {
                 font-size: 14px;
+              }
+            }
+          }
+
+          .chat {
+            &__items {
+              min-height: 450px;
+              max-height: 450px;
+              padding: 0 10px;
+              overflow-y: auto;
+
+              .chat-item {
+                padding: 8px 0;
+                border-bottom: 1px solid $borderGrey;
+
+                &:last-child {
+                  border: none;
+                }
+
+                &__header {
+                  cursor: pointer;
+                  margin-bottom: 5px;
+                }
+
+                &__avatar {
+                  position: relative;
+                  width: 34px;
+                  float: left;
+
+                  img {
+                    width: 100%;
+                    border-radius: 50%;
+                  }
+
+                  div {
+                    position: absolute;
+                    bottom: 4px;
+                    right: -2px;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 10px;
+                    border: 2px solid #fff;
+                    background-color: #01c451;
+                  }
+                }
+
+                &__info {
+                  padding: 2px 0 2px 44px;
+                  height: 34px;
+
+                  &_username {
+                    font-weight: 500;
+                    font-size: 13px;
+                    max-width: 100%;
+                    color: $mainColor2;
+                  }
+
+                  &_date {
+                    color: #868e96;
+                    font-size: 12px;
+                  }
+                }
+
+                &__message {
+                  font-size: 14px;
+                  line-height: 22px;
+                  word-wrap: break-word;
+                }
+              }
+            }
+
+            &-send {
+              display: flex;
+              padding: 4px 0;
+              border-top: 1px solid $borderGrey;
+              padding-top: 5px;
+              &__area {
+                padding: 7px;
+                height: 60px;
+                max-height: 260px;
+                width: 83%;
+                max-width: 83%;
+                background-color: #fff;
+                font-size: 14px;
+                line-height: 20px;
+                resize: none;
+                border: 0;
+                overflow-wrap: break-word;
+
+                &:focus {
+                  outline: none;
+                }
+              }
+
+              &__button {
+                width: 40px;
+                height: 25px;
+                padding: 0;
+                margin: auto 0 auto 4px;
+                cursor: pointer;
+                font-size: 14px;
+                border: none;
+                border-radius: 5px;
+                color: #FFFFFF;
+                background-color: $mainColor2;
+                transition: background-color 0.1s ease-in-out;
+
+                &:hover {
+                  background-color: lighten($mainColor2, 5%);
+                }
+
+                &:active {
+                  background-color: lighten($mainColor2, 8%);
+
+                }
               }
             }
           }
