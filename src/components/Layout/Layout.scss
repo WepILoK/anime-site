@@ -23,11 +23,11 @@
     }
 
     &__logo {
-      cursor: pointer;
       padding-top: 9px;
       padding-bottom: 5px;
 
       img {
+        cursor: pointer;
         width: 150px;
         height: 35px;
       }
@@ -59,6 +59,7 @@
         width: 125px;
         padding: 7px 13px;
         text-align: end;
+        @include noSelect
       }
 
       &__image {
@@ -87,12 +88,12 @@
       }
 
       &__avatar {
-        cursor: pointer;
         padding-left: 13px;
         margin-top: 2px;
         height: 35px;
 
         img {
+          cursor: pointer;
           width: 35px;
           border-radius: 30px;
         }
@@ -214,10 +215,12 @@
 
     .hover {
       transition: background-color 0.1s ease-in-out;
+
       &:hover {
         background-color: lighten($mainColor2, 5%);
         border-radius: 5px;
       }
+
       &:active {
         background-color: lighten($mainColor2, 8%);
 

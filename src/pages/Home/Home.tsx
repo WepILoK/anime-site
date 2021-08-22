@@ -9,9 +9,9 @@ export const Home = () => {
                 <div className='container__left-side'>
                     <div className='section'>
                         <div className='section__body'>
-                            <h2 className='title'>
+                            <div className='section__body-title'>
                                 Популярное аниме текущего сезона
-                            </h2>
+                            </div>
                             <div className='popular-list'>
                                 {new Array(6).fill(1).map(item =>
                                     <div className='popular-list__item item'>
@@ -28,7 +28,7 @@ export const Home = () => {
                     <div className='info-lists'>
                         <div className='info-lists__section section'>
                             <div className='section__body'>
-                                <div className='title'>
+                                <div className='section__body-title'>
                                     Последние новости
                                 </div>
                                 <div className='info-list-items'>
@@ -49,7 +49,7 @@ export const Home = () => {
                         </div>
                         <div className='info-lists__section section'>
                             <div className='section__body'>
-                                <div className='title'>
+                                <div className='section__body-title'>
                                     Последние темы форума
                                 </div>
                                 <div className='info-list-items'>
@@ -69,10 +69,8 @@ export const Home = () => {
                         </div>
                     </div>
                     <div className='section'>
-                        <div className='section__header'>
-                            <div className='section__header-title'>
+                        <div className='section__header_left-side'>
                                 Новые серии
-                            </div>
                         </div>
                         <div className='section__body'>
                             <div className='updates'>
@@ -103,9 +101,9 @@ export const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className='container__right-side aside'>
-                    <div className='aside__panel'>
-                        <div className='aside__title'>
+                <div className='container__right-side'>
+                    <div className='section'>
+                        <div className='section__header_right-side'>
                             Мини чат
                         </div>
                         <div className='chat'>
@@ -146,8 +144,8 @@ export const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='aside__panel'>
-                        <div className='aside__title'>
+                    <div className='section'>
+                        <div className='section__header_right-side'>
                             Топ аниме
                         </div>
                         <div className='list'>

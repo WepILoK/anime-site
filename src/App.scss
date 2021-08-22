@@ -6,6 +6,17 @@ $errorColor: #EA0000;
 $disabled: #4E4E4E;
 $borderGrey: #e5e5e5;
 
+@mixin noSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                   supported by Chrome, Opera and Firefox */
+}
+
 .App {
   .text-cut {
     white-space: nowrap;
@@ -24,27 +35,52 @@ $borderGrey: #e5e5e5;
     min-height: 100vh;
     width: 100vw;
 
+    &__inner {
+      .container {
+        min-width: 900px;
+        max-width: 1200px;
+        padding: 0 15px;
+        width: 100%;
+        margin: 15px auto 0;
+
+        &__left-side {
+          float: left;
+          width: calc(100% - 310px);
+        }
+
+        &__right-side {
+          float: right;
+          width: 285px;
+        }
+      }
+    }
+
     .section {
       margin-bottom: 17px;
       background: #ffffff;
       border-radius: 5px;
 
       &__header {
-        min-height: 45px;
-        padding: 12px 13px;
-        border-bottom: 1px solid #e5e5e5;
-
-        &-title {
+        &_left-side {
           font-weight: 600;
+          min-height: 45px;
+          padding: 12px 13px;
+          border-bottom: 1px solid #e5e5e5;
         }
+        &_right-side {
+          padding: 10px 14px;
+          font-size: 16px;
+          font-weight: 600;
+          border-bottom: 1px solid $mainColor2;
+        }
+
       }
 
       &__body {
         padding: 10px 14px;
 
-        .title {
+        &-title {
           text-align: start;
-          position: relative;
           margin-bottom: 12px;
           font-weight: 600;
           font-size: 19px;

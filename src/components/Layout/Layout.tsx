@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
 import './Layout.scss'
 
 export const Layout: React.FC = ({children}) => {
@@ -14,7 +15,9 @@ export const Layout: React.FC = ({children}) => {
             <div className='header'>
                 <div className='header__inner'>
                     <div className="header__logo">
-                        <img src={require("../../assets/images/anim-logo.png").default} alt='AnimLogo'/>
+                        <Link to='/'>
+                            <img src={require("../../assets/images/anim-logo.png").default} alt='AnimLogo'/>
+                        </Link>
                     </div>
                     <div className="header__menu menu">
                         <div className='menu__item hover'>Каталог</div>
@@ -86,7 +89,9 @@ export const Layout: React.FC = ({children}) => {
                                 </div>
                             </div>)}
                         <div className='user__avatar'>
-                            <img src={require("../../assets/images/avatar.png").default} alt='Avatar'/>
+                            <Link to='/profile'>
+                                <img src={require("../../assets/images/avatar.png").default} alt='Avatar'/>
+                            </Link>
                         </div>
                     </div>
                 </div>
