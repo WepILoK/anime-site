@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Switch } from 'react-router-dom';
+import {Redirect, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import {Layout} from "./components/Layout/Layout";
 import {Home} from "./pages/Home/Home";
@@ -12,7 +12,9 @@ export const App = () => {
             <Layout>
                 <Switch>
                     <Route path='/' component={Home} exact/>
-                    <Route path='/profile' component={Profile}/>
+                    <Route path='/profile'>
+                        {false ? <Redirect to="/" /> : <Profile/>}
+                    </Route>
                 </Switch>
             </Layout>
         </div>

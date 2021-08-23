@@ -2,30 +2,99 @@
 
 .container {
   &__left-side {
+    //Временно
+    .updates {
 
-  }
+      &__item {
+        cursor: pointer;
+        display: flex;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e5e5e5;
 
-  &__right-side {
-    .navbar {
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+
+      &__avatar {
+        width: 100px;
+        border-radius: 3px;
+      }
+
+      &__content {
+        flex-grow: 1;
+        padding-left: 16px;
+
+      }
+
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 3px 8px 5px 2px;
+        margin-bottom: 4px;
+        background-color: #F8F8F9;
+        border-bottom: 1px solid $mainColor2;
+
+      }
+
+      &__name {
+        font-size: 16px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      &__date {
+      }
 
       &__body {
 
       }
+
+      &__series {
+        height: 72px;
+
+        &_number {
+          padding: 5px 5px;
+        }
+      }
+    }
+  }
+
+  &__right-side {
+    .navbar {
+      position: fixed ;
+      width: 285px;
+
+      &__body {
+
+      }
+
       &__item {
         padding: 10px 15px;
         cursor: pointer;
         border-bottom: 1px solid $borderGrey;
         transition: background 0.2s ease-in-out;
+        color: #000000;
         &:last-child {
           border: none;
         }
+
         &:hover {
-          background-color: darken(#fff, 3%);
+          background-color: darken(#fff, 2%);
         }
+
         &:active {
           transition: background 0.1s ease-in-out;
-          background-color: darken(#fff, 5%);
+          background-color: darken(#fff, 3%);
         }
+      }
+      .active {
+        background-color: darken(#fff, 3%);
       }
     }
   }

@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import './Layout.scss'
 
 export const Layout: React.FC = ({children}) => {
-    const [visibleUser, setVisibleUser] = useState(false)
     const [visibleNotifications, setVisibleNotifications] = useState(false)
 
     const toggleVisibleNotifications = () => {
@@ -25,9 +24,6 @@ export const Layout: React.FC = ({children}) => {
                         <div className='menu__item hover'>Форум</div>
                     </div>
                     <div className="header__user user">
-                        <div className='user__name text-cut'>
-                            NAme
-                        </div>
                         <div className='user__image hover'
                              onClick={toggleVisibleNotifications}>
                             <img src={require("../../assets/images/notifications.svg").default} alt='notifications'/>
@@ -93,6 +89,15 @@ export const Layout: React.FC = ({children}) => {
                                 <img src={require("../../assets/images/avatar.png").default} alt='Avatar'/>
                             </Link>
                         </div>
+                        {false ? (
+                            <div className='user__name text-cut'>
+                                Выйти
+                            </div>
+                        ) : (
+                            <div className='user__name'>
+                                Войти
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

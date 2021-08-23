@@ -38,7 +38,7 @@ export const Home = () => {
                                                 Сайт закрыт на технические работы по причине долгого создания сайта
                                                 16.08.2021
                                             </div>
-                                            <div className='info-list-item__info'>
+                                            <div className='info-list-item__user-info'>
                                                 <div className='info-list-item__user'>UserName</div>
                                                 <div className='info-list-item__date'>16.08.2021</div>
                                             </div>
@@ -58,7 +58,7 @@ export const Home = () => {
                                             <div className='info-list-item__text text-cut'>
                                                 Тема форума
                                             </div>
-                                            <div className='info-list-item__info'>
+                                            <div className='info-list-item__user-info'>
                                                 <div className='info-list-item__user'>UserName</div>
                                                 <div className='info-list-item__date'>16.08.2021</div>
                                             </div>

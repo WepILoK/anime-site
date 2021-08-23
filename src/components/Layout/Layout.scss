@@ -56,9 +56,10 @@
       position: relative;
 
       &__name {
-        width: 125px;
-        padding: 7px 13px;
+        padding: 7px 3px;
+        margin-left: 30px;
         text-align: end;
+        cursor: pointer;
         @include noSelect
       }
 
