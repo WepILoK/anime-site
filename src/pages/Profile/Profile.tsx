@@ -1,16 +1,12 @@
-import React from 'react';
-import {Link, Route, useHistory, useParams} from 'react-router-dom';
+import React, {useCallback} from 'react';
+import {Link, Route, useHistory} from 'react-router-dom';
 import './Profile.scss'
 import {ProfileRoutes} from "../../routes";
+import {Navbar} from "./components/Navbar/Navbar";
+import {User} from "../../components/User/User";
 
 export const Profile = () => {
-    const params = useParams();
-    const history = useHistory()
 
-    console.log(history.location.pathname)
-    const addActiveClass = (route: string): string => {
-        return history.location.pathname === route ? ' active' : ''
-    }
 
     return (
         <div className='page__inner'>
@@ -47,47 +43,10 @@ export const Profile = () => {
                             </div>
                         </div>
                     </Route>
+                    <Route path={ProfileRoutes.USER} exact component={User}/>
                 </div>
                 <div className='container__right-side'>
-                    <div className='navbar'>
-                        <div className='section'>
-                            <div className='section__header_right-side'>
-                                Меню
-                            </div>
-                            <div className='navbar__body'>
-                                <Link to={ProfileRoutes.USER}>
-                                    <div className={'navbar__item' + addActiveClass(ProfileRoutes.USER)}>
-                                        Мой профиль
-                                    </div>
-                                </Link>
-                                <Link to={ProfileRoutes.MESSAGES}>
-                                    <div className={'navbar__item' + addActiveClass(ProfileRoutes.MESSAGES)}>
-                                        Сообщения
-                                    </div>
-                                </Link>
-                                <Link to={ProfileRoutes.FRIENDS}>
-                                    <div className={'navbar__item' + addActiveClass(ProfileRoutes.FRIENDS)}>
-                                        Друзья
-                                    </div>
-                                </Link>
-                                <Link to={ProfileRoutes.NOTIFICATIONS}>
-                                    <div className={'navbar__item' + addActiveClass(ProfileRoutes.NOTIFICATIONS)}>
-                                        Уведомления
-                                    </div>
-                                </Link>
-                                <Link to={ProfileRoutes.ANIME_LIST}>
-                                    <div className={'navbar__item' + addActiveClass(ProfileRoutes.ANIME_LIST)}>
-                                        Список аниме
-                                    </div>
-                                </Link>
-                                <Link to={ProfileRoutes.SETTINGS}>
-                                    <div className={'navbar__item' + addActiveClass(ProfileRoutes.SETTINGS)}>
-                                        Настройки
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
+                    <Navbar/>
                 </div>
             </div>
         </div>

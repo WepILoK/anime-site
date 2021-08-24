@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Layout.scss'
+import {ProfileRoutes} from "../../routes";
 
 export const Layout: React.FC = ({children}) => {
     const [visibleNotifications, setVisibleNotifications] = useState(false)
@@ -29,10 +30,12 @@ export const Layout: React.FC = ({children}) => {
                             <img src={require("../../assets/images/notifications.svg").default} alt='notifications'/>
                             <p className='text-cut'>{23}</p>
                         </div>
-                        <div className='user__image hover'>
-                            <img src={require("../../assets/images/message.svg").default} alt='messages'/>
-                            <p className='text-cut'>{3}</p>
-                        </div>
+                        <Link to={ProfileRoutes.MESSAGES}>
+                            <div className='user__image hover'>
+                                <img src={require("../../assets/images/message.svg").default} alt='messages'/>
+                                <p className='text-cut'>{3}</p>
+                            </div>
+                        </Link>
                         {visibleNotifications && (
                             <div className='user__dropdown'>
                                 <div className='notifications'>
@@ -78,9 +81,12 @@ export const Layout: React.FC = ({children}) => {
                                             </div>)}
                                     </div>
                                     <div className='notifications__footer'>
-                                        <div className='notifications__button hover'>
-                                            Все уведомления
-                                        </div>
+                                        <Link to={ProfileRoutes.NOTIFICATIONS}>
+                                            <div className='notifications__button hover'
+                                                 onClick={() => setVisibleNotifications(false)}>
+                                                Все уведомления
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>)}
