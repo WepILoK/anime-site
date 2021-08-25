@@ -3,7 +3,7 @@ import {Redirect, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import {Layout} from "./components/Layout/Layout";
 import {Home} from "./pages/Home/Home";
-import {Profile} from "./pages/Profile/Profile";
+import {User} from "./pages/User/User";
 
 
 export const App = () => {
@@ -12,8 +12,8 @@ export const App = () => {
             <Layout>
                 <Switch>
                     <Route path='/' component={Home} exact/>
-                    <Route path='/profile'>
-                        {false ? <Redirect to="/" /> : <Profile/>}
+                    <Route path='/user'>
+                        {false ? <Redirect to="/" /> : <User/>}
                     </Route>
                 </Switch>
             </Layout>

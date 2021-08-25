@@ -1,0 +1,131 @@
+@import "src/App";
+
+.user {
+  &__header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid $mainColor2;
+    background-color: $borderGrey;
+
+    &-left {
+      display: flex;
+      align-items: center;
+
+      .user {
+        &__avatar {
+          width: 100px;
+          margin-right: 10px;
+
+          img {
+            border-radius: 50%;
+            width: 100%;
+          }
+        }
+
+        &__name-date {
+          .user {
+            &__name {
+              font-size: 16px;
+              font-weight: 500;
+            }
+
+            &__registration-date {
+              font-size: 14px;
+              color: #a2a2a2;
+            }
+          }
+
+          .online-marker {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-left: 10px;
+            border-radius: 10px;
+            background-color: #01c451;
+          }
+        }
+      }
+    }
+
+    &-right {
+      .user__button {
+        width: 200px;
+        margin: 5px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__body {
+    padding: 10px;
+    height: 300px;
+
+    .user__top {
+      display: flex;
+
+      &-left {
+        display: flex;
+        padding-right: 10px;
+        align-items:flex-end;
+        border-right: 2px solid $borderGrey;
+        .user__social-networks {
+          padding-bottom: 10px;
+          .social-network {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            padding: 5px 0;
+
+            &__image {
+              img {
+                height: 45px;
+                width: 45px;
+              }
+            }
+
+            &__url {
+              padding-left: 5px;
+
+              a {
+                font-size: 17px;
+                font-weight: 600;
+                color: $mainColor2;
+                text-decoration: underline $mainColor2;
+              }
+            }
+          }
+        }
+      }
+
+      &-right {
+        margin-left: 30px;
+
+        .info {
+          &__title {
+
+          }
+
+          &__list {
+            padding: 7px;
+          }
+
+          &__item {
+            display: flex;
+            padding: 5px 0;
+
+            h4 {
+              width: 100px;
+            }
+
+            span {
+
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

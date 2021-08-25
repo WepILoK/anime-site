@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Layout.scss'
-import {ProfileRoutes} from "../../routes";
+import {UserRoutes} from "../../routes";
 
 export const Layout: React.FC = ({children}) => {
     const [visibleNotifications, setVisibleNotifications] = useState(false)
@@ -30,7 +30,7 @@ export const Layout: React.FC = ({children}) => {
                             <img src={require("../../assets/images/notifications.svg").default} alt='notifications'/>
                             <p className='text-cut'>{23}</p>
                         </div>
-                        <Link to={ProfileRoutes.MESSAGES}>
+                        <Link to={UserRoutes.MESSAGES}>
                             <div className='user__image hover'>
                                 <img src={require("../../assets/images/message.svg").default} alt='messages'/>
                                 <p className='text-cut'>{3}</p>
@@ -81,8 +81,8 @@ export const Layout: React.FC = ({children}) => {
                                             </div>)}
                                     </div>
                                     <div className='notifications__footer'>
-                                        <Link to={ProfileRoutes.NOTIFICATIONS}>
-                                            <div className='notifications__button hover'
+                                        <Link to={UserRoutes.NOTIFICATIONS}>
+                                            <div className='notifications__button button'
                                                  onClick={() => setVisibleNotifications(false)}>
                                                 Все уведомления
                                             </div>
@@ -91,7 +91,7 @@ export const Layout: React.FC = ({children}) => {
                                 </div>
                             </div>)}
                         <div className='user__avatar'>
-                            <Link to='/profile'>
+                            <Link to={UserRoutes.PROFILE}>
                                 <img src={require("../../assets/images/avatar.png").default} alt='Avatar'/>
                             </Link>
                         </div>

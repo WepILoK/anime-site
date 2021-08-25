@@ -4,16 +4,16 @@ import React from "react";
 export const HomeRoutes = {
     FORUM: '/forum',
     CATALOG: '/catalog',
-    PROFILE: '/profile'
+    USER: '/user'
 }
 
-export const ProfileRoutes = {
-    USER: '/profile/user',
-    NOTIFICATIONS: '/profile/notifications',
-    MESSAGES: '/profile/messages',
-    FRIENDS: '/profile/friends',
-    ANIME_LIST: '/profile/animelist',
-    SETTINGS: '/profile/settings'
+export const UserRoutes = {
+    PROFILE: '/user/profile',
+    NOTIFICATIONS: '/user/notifications',
+    MESSAGES: '/user/messages',
+    FRIENDS: '/user/friends',
+    ANIME_LIST: '/user/animelist',
+    SETTINGS: '/user/settings'
 }
 
 

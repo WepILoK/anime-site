@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Link, useHistory} from "react-router-dom";
-import {ProfileRoutes} from "../../../../routes";
+import {UserRoutes} from "../../../../routes";
 
 
 
@@ -18,38 +18,38 @@ export const Navbar: React.FC = () => {
                     Меню
                 </div>
                 <div className='navbar__body'>
-                    <Link to={ProfileRoutes.USER}>
-                        <div className={'navbar__item' + addActiveClass(ProfileRoutes.USER)}
+                    <Link to={UserRoutes.PROFILE}>
+                        <div className={'navbar__item' + addActiveClass(UserRoutes.PROFILE)}
                         onClick={() => setUpdate(c => !c)}>
                             Мой профиль
                         </div>
                     </Link>
-                    <Link to={ProfileRoutes.MESSAGES}>
-                        <div className={'navbar__item' + addActiveClass(ProfileRoutes.MESSAGES)}
+                    <Link to={UserRoutes.MESSAGES}>
+                        <div className={'navbar__item' + addActiveClass(UserRoutes.MESSAGES)}
                         onClick={() => setUpdate(c => !c)}>
                             Сообщения
                         </div>
                     </Link>
-                    <Link to={ProfileRoutes.FRIENDS}>
-                        <div className={'navbar__item' + addActiveClass(ProfileRoutes.FRIENDS)}
+                    <Link to={UserRoutes.FRIENDS}>
+                        <div className={'navbar__item' + addActiveClass(UserRoutes.FRIENDS)}
                         onClick={() => setUpdate(c => !c)}>
                             Друзья
                         </div>
                     </Link>
-                    <Link to={ProfileRoutes.NOTIFICATIONS}>
-                        <div className={'navbar__item' + addActiveClass(ProfileRoutes.NOTIFICATIONS)}
+                    <Link to={UserRoutes.NOTIFICATIONS}>
+                        <div className={'navbar__item' + addActiveClass(UserRoutes.NOTIFICATIONS)}
                         onClick={() => setUpdate(c => !c)}>
                             Уведомления
                         </div>
                     </Link>
-                    <Link to={ProfileRoutes.ANIME_LIST}>
-                        <div className={'navbar__item' + addActiveClass(ProfileRoutes.ANIME_LIST)}
+                    <Link to={UserRoutes.ANIME_LIST}>
+                        <div className={'navbar__item' + addActiveClass(UserRoutes.ANIME_LIST)}
                         onClick={() => setUpdate(c => !c)}>
                             Список аниме
                         </div>
                     </Link>
-                    <Link to={ProfileRoutes.SETTINGS}>
-                        <div className={'navbar__item' + addActiveClass(ProfileRoutes.SETTINGS)}
+                    <Link to={UserRoutes.SETTINGS}>
+                        <div className={'navbar__item' + addActiveClass(UserRoutes.SETTINGS)}
                         onClick={() => setUpdate(c => !c)}>
                             Настройки
                         </div>

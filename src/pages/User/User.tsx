@@ -1,18 +1,18 @@
 import React, {useCallback} from 'react';
 import {Link, Route, useHistory} from 'react-router-dom';
-import './Profile.scss'
-import {ProfileRoutes} from "../../routes";
+import './User.scss'
+import {UserRoutes} from "../../routes";
 import {Navbar} from "./components/Navbar/Navbar";
-import {User} from "../../components/User/User";
+import {Profile} from "../../components/Profile/Profile";
 
-export const Profile = () => {
+export const User = () => {
 
 
     return (
         <div className='page__inner'>
             <div className='container'>
                 <div className='container__left-side'>
-                    <Route path={ProfileRoutes.NOTIFICATIONS} exact>
+                    <Route path={UserRoutes.NOTIFICATIONS} exact>
                         <div className='section'>
                             <div className='section__body'>
                                 <div className='updates'>
@@ -43,7 +43,7 @@ export const Profile = () => {
                             </div>
                         </div>
                     </Route>
-                    <Route path={ProfileRoutes.USER} exact component={User}/>
+                    <Route path={UserRoutes.PROFILE} exact component={Profile}/>
                 </div>
                 <div className='container__right-side'>
                     <Navbar/>
