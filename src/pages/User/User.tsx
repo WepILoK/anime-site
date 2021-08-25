@@ -4,6 +4,7 @@ import './User.scss'
 import {UserRoutes} from "../../routes";
 import {Navbar} from "./components/Navbar/Navbar";
 import {Profile} from "../../components/Profile/Profile";
+import {Messages} from "./components/Messages/Messages";
 
 export const User = () => {
 
@@ -44,6 +45,7 @@ export const User = () => {
                         </div>
                     </Route>
                     <Route path={UserRoutes.PROFILE} exact component={Profile}/>
+                    <Route path={UserRoutes.MESSAGES} exact component={Messages}/>
                 </div>
                 <div className='container__right-side'>
                     <Navbar/>

@@ -1,0 +1,50 @@
+@import "src/App";
+
+.messages {
+  height: 600px;
+  display: flex;
+  &__users {
+    padding: 10px;
+    min-width: 270px;
+    max-width: 270px;
+    border-right: 2px solid $borderGrey;
+    .users-list {
+      height: 100%;
+      overflow-y: auto;
+      .user {
+        cursor: pointer;
+        padding: 10px 10px;
+        border-bottom: 2px solid $borderGrey;
+        &:last-child {
+          border-bottom: none;
+        }
+        &__header {
+          display: flex;
+          align-items: center;
+          padding-bottom: 5px;
+          .user {
+            &__avatar {
+              width: 40px;
+              img {
+                width: 100%;
+              }
+            }
+            &__name {
+              padding-left: 10px;
+              font-weight: 500;
+            }
+          }
+        }
+        &__message {
+          border-radius: 5px;
+          background-color: #f1f1f1;
+          padding: 2px 6px;
+        }
+      }
+    }
+  }
+  &__items {
+    width: 100%;
+    padding: 10px;
+  }
+}

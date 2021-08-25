@@ -1,6 +1,6 @@
 @import "src/App";
 
-.user {
+.profile {
   &__header {
     padding: 10px;
     display: flex;
@@ -13,7 +13,7 @@
       display: flex;
       align-items: center;
 
-      .user {
+      .profile {
         &__avatar {
           width: 100px;
           margin-right: 10px;
@@ -25,7 +25,7 @@
         }
 
         &__name-date {
-          .user {
+          .profile {
             &__name {
               font-size: 16px;
               font-weight: 500;
@@ -50,7 +50,7 @@
     }
 
     &-right {
-      .user__button {
+      .profile__button {
         width: 200px;
         margin: 5px;
         text-align: center;
@@ -62,7 +62,7 @@
     padding: 10px;
     height: 300px;
 
-    .user__top {
+    .profile__top {
       display: flex;
 
       &-left {
@@ -70,7 +70,7 @@
         padding-right: 10px;
         align-items:flex-end;
         border-right: 2px solid $borderGrey;
-        .user__social-networks {
+        .profile__social-networks {
           padding-bottom: 10px;
           .social-network {
             display: flex;

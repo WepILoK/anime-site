@@ -4,32 +4,32 @@ import './Profile.scss'
 
 export const Profile = () => {
     return (
-        <div className='user'>
+        <div className='profile'>
             <div className='section'>
-                <div className='user__header'>
-                    <div className='user__header-left'>
-                        <div className='user__avatar'>
+                <div className='profile__header'>
+                    <div className='profile__header-left'>
+                        <div className='profile__avatar'>
                             <img src={require("../../assets/images/avatar.png").default} alt='Avatar'/>
                         </div>
-                        <div className='user__name-date'>
-                            <div className='user__name'>
+                        <div className='profile__name-date'>
+                            <div className='profile__name'>
                                 User Name
                                 <div className='online-marker'/>
                             </div>
-                            <div className='user__registration-date'>
+                            <div className='profile__registration-date'>
                                 на сайте с 29 февраля 1999
                             </div>
                         </div>
                     </div>
-                    <div className='user__header-right'>
-                        <div className='user__button button'>Отправить сообщение</div>
-                        <div className='user__button button'>Добавить в друзья</div>
+                    <div className='profile__header-right'>
+                        <div className='profile__button button'>Отправить сообщение</div>
+                        <div className='profile__button button'>Добавить в друзья</div>
                     </div>
                 </div>
-                <div className='user__body'>
-                    <div className='user__top'>
-                        <div className='user__top-left'>
-                            <div className='user__social-networks'>
+                <div className='profile__body'>
+                    <div className='profile__top'>
+                        <div className='profile__top-left'>
+                            <div className='profile__social-networks'>
                                 <div className='social-network'>
                                     <div className='social-network__image'>
                                         <img src={require("../../assets/images/VK.svg").default}
@@ -59,7 +59,7 @@ export const Profile = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='user__top-right'>
+                        <div className='profile__top-right'>
                             <div className='info'>
                                 <div className='info__title'>
                                     <h3>Информация о пользователе</h3>

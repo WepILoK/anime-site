@@ -2,6 +2,7 @@ import React from "react";
 
 
 export const HomeRoutes = {
+    ROOT: '/',
     FORUM: '/forum',
     CATALOG: '/catalog',
     USER: '/user'
