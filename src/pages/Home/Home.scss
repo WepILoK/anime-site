@@ -173,14 +173,14 @@
       }
     }
 
-    .chat {
+    .mini-chat {
       &__items {
         min-height: 462px;
         max-height: 462px;
         padding: 0 10px;
         overflow-y: auto;
 
-        .chat-item {
+        .mini-chat-item {
           padding: 8px 0;
           border-bottom: 1px solid $borderGrey;
 

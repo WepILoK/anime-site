@@ -106,26 +106,26 @@ export const Home = () => {
                         <div className='section__header_right-side'>
                             Мини чат
                         </div>
-                        <div className='chat'>
-                            <div className='chat__items'>
+                        <div className='mini-chat'>
+                            <div className='mini-chat__items'>
                                 {Array(15).fill('').map(i =>
-                                    <div className='chat-item'>
-                                        <div className='chat-item__header'>
-                                            <div className='chat-item__avatar'>
+                                    <div className='mini-chat-item'>
+                                        <div className='mini-chat-item__header'>
+                                            <div className='mini-chat-item__avatar'>
                                                 <img src={require("../../assets/images/avatar.png").default}
                                                      alt="UserAvatar"/>
                                                 <div/>
                                             </div>
-                                            <div className='chat-item__info'>
-                                                <div className='chat-item__info_username text-cut'>
+                                            <div className='mini-chat-item__info'>
+                                                <div className='mini-chat-item__info_username text-cut'>
                                                     UserName
                                                 </div>
-                                                <div className='chat-item__info_date'>
+                                                <div className='mini-chat-item__info_date'>
                                                     около 2 часов назад
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='chat-item__message'>
+                                        <div className='mini-chat-item__message'>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta
                                             itaque laudantium nemo nisi omnis, possimus velit veritatis voluptatibus.
                                             Aliquam animi beatae eveniet ipsa maxime recusandae sapiente sit, unde
@@ -134,11 +134,11 @@ export const Home = () => {
                                     </div>
                                 )}
                             </div>
-                            <div className='chat-send'>
-                                <textarea className='chat-send__area'
+                            <div className='mini-chat-send'>
+                                <textarea className='mini-chat-send__area'
                                           maxLength={250}
                                           placeholder='Введите сообщение'/>
-                                <button className='chat-send__button'>
+                                <button className='mini-chat-send__button'>
                                     Send
                                 </button>
                             </div>

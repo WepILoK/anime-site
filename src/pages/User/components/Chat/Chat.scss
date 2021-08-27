@@ -1,0 +1,130 @@
+@import "src/App";
+
+.chat {
+  height: 600px;
+  display: flex;
+  &__users {
+    padding: 10px;
+    min-width: calc(100% - 590px);
+    max-width: calc(100% - 590px);
+    border-right: 2px solid $borderGrey;
+    .users-list {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      .user {
+        cursor: pointer;
+        padding: 10px 10px;
+        border-bottom: 2px solid $borderGrey;
+        &:last-child {
+          border-bottom: none;
+        }
+        &__header {
+          display: flex;
+          align-items: center;
+          padding-bottom: 5px;
+          .user {
+            &__avatar {
+              position: relative;
+              width: 40px;
+              .online-marker {
+                position: absolute;
+                bottom: 4px;
+                right: -2px;
+                width: 12px;
+                height: 12px;
+                border-radius: 10px;
+                border: 2px solid #fff;
+                background-color: #01c451;
+              }
+              img {
+                width: 100%;
+              }
+            }
+            &__name {
+              width: 150px;
+              padding-left: 10px;
+              font-weight: 500;
+            }
+          }
+        }
+        &__message {
+          border-radius: 5px;
+          background-color: #f1f1f1;
+          padding: 2px 6px;
+        }
+      }
+    }
+  }
+  &__messages {
+    min-width: calc(100% - 270px);
+    max-width: calc(100% - 270px);
+    .messages {
+      &__author {
+        width: 100%;
+        padding: 15px 10px 10px 15px;
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 2px solid $borderGrey;
+        h4 {
+          width: 50%;
+        }
+      }
+      &__list {
+        height: 450px;
+        overflow-y: auto;
+        background-color: #f3f3f3;
+        .message {
+          display: flex;
+          width: 100%;
+          &__bubble {
+            padding: 5px 7px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            width: auto;
+            max-width: 300px;
+            border-radius: 4px;
+            background-color: #dedede;
+          }
+          .user {
+            margin-right: auto;
+            margin-left: 5px;
+          }
+          .another-user {
+            margin-left: auto;
+            margin-right: 5px;
+          }
+
+        }
+      }
+      &__send-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border-top: 2px solid $borderGrey;
+          textarea {
+            padding: 7px;
+            height: 70px;
+            max-height: 260px;
+            font-size: 16px;
+            width: 510px;
+            resize: none;
+            border: 0;
+            border-radius: 6px;
+            background-color: #f8f8f8;
+            overflow-wrap: break-word;
+            &:focus {
+              outline: none;
+            }
+        }
+        img {
+          margin-right: 10px;
+          width: 35px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+}

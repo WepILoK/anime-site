@@ -1,220 +1,519 @@
 {
-  "topList": [
+  "topAnimeList": [
     {
       "id": 0,
-      "image": "animeAvatar.png",
+      "avatar": "animeAvatar.png",
       "name": "Название аниме",
       "views": 4156133
     },
     {
       "id": 1,
-      "image": "animeAvatar1.png",
+      "avatar": "animeAvatar1.png",
       "name": "Название аниме1",
       "views": 521561
     },
     {
       "id": 2,
-      "image": "animeAvatar2.png",
+      "avatar": "animeAvatar2.png",
       "name": "Название аниме2",
       "views": 913313
     },
     {
       "id": 3,
-      "image": "animeAvatar3.png",
+      "avatar": "animeAvatar3.png",
       "name": "Название аниме3",
       "views": 141342
     },
     {
       "id": 4,
-      "image": "animeAvatar4.png",
+      "avatar": "animeAvatar4.png",
       "name": "Название аниме4",
       "views": 167134
     },
     {
       "id": 5,
-      "image": "animeAvatar5.png",
+      "avatar": "animeAvatar5.png",
       "name": "Название аниме5",
       "views": 612411
     },
     {
       "id": 6,
-      "image": "animeAvatar6.png",
+      "avatar": "animeAvatar6.png",
       "name": "Название аниме6",
       "views": 612413
     },
     {
       "id": 7,
-      "image": "animeAvatar7.png",
+      "avatar": "animeAvatar7.png",
       "name": "Название аниме7",
       "views": 6712433
     },
     {
       "id": 8,
-      "image": "animeAvatar8.png",
+      "avatar": "animeAvatar8.png",
       "name": "Название аниме8",
       "views": 5126317
     },
     {
       "id": 9,
-      "image": "animeAvatar9.png",
+      "avatar": "animeAvatar9.png",
       "name": "Название аниме9",
       "views": 61713531
     }
   ],
-  "user": {
-    "id": 0,
-    "name": "Дмитрий",
-    "surname": "Зайцев",
-    "age": 26,
-    "country": "Россия",
-    "city": "Москва",
-    "avatar": "avatar.png",
-    "username": "UserName0",
-    "vk": "https://vk.com/feed",
-    "facebook": false,
-    "twitter": false,
-    "notifications": [
-      {
-        "id": 4,
-        "image": "animeAvatar4.png",
-        "name": "Название аниме4",
-        "series": 4,
-        "translationTeam": "Translation-Team",
-        "addedAt": "14:40, 21.08.21"
-      },
-      {
-        "id": 11,
-        "image": "animeAvatar11.png",
-        "name": "Название аниме11",
-        "series": 11,
-        "translationTeam": "Translation-Team",
-        "addedAt": "14:40, 21.08.21"
-      },
-      {
-        "id": 4,
-        "image": "animeAvatar4.png",
-        "name": "Название аниме4",
-        "series": 1,
-        "translationTeam": "Translation-Team",
-        "addedAt": "14:40, 21.08.21"
-      },
-      {
-        "id": 19,
-        "image": "animeAvatar19.png",
-        "name": "Название аниме19",
-        "series": 6,
-        "translationTeam": "Translation-Team",
-        "addedAt": "14:40, 21.08.21"
-      },
-      {
-        "id": 13,
-        "image": "animeAvatar13.png",
-        "name": "Название аниме13",
-        "series": 5,
-        "translationTeam": "Translation-Team",
-        "addedAt": "14:40, 21.08.21"
-      }
-    ],
-    "messages": []
-  },
-  "updatesList": [
+  "popularList": [
     {
-      "id": 4,
-      "image": "animeAvatar4.png",
-      "name": "Название аниме4",
-      "series": 4,
-      "addedAt": "14:40, 21.08.21"
-    },
-    {
-      "id": 11,
-      "image": "animeAvatar11.png",
-      "name": "Название аниме11",
-      "series": 11,
-      "addedAt": "14:40, 21.08.21"
+      "id": 21,
+      "avatar": "animeAvatar21.png",
+      "name": "Название аниме21"
     },
     {
       "id": 1,
-      "image": "animeAvatar1.png",
-      "name": "Название аниме1",
-      "series": 5,
-      "addedAt": "14:40, 21.08.21"
-    },
-    {
-      "id": 1,
-      "image": "animeAvatar1.png",
-      "name": "Название аниме1",
-      "series": 4,
-      "addedAt": "14:40, 21.08.21"
-    },
-    {
-      "id": 2,
-      "image": "animeAvatar2.png",
-      "name": "Название аниме2",
-      "series": 9,
-      "addedAt": "14:40, 21.08.21"
-    },
-    {
-      "id": 20,
-      "image": "animeAvatar20.png",
-      "name": "Название аниме20",
-      "series": 1,
-      "addedAt": "14:40, 21.08.21"
-    },
-    {
-      "id": 4,
-      "image": "animeAvatar4.png",
-      "name": "Название аниме4",
-      "series": 1,
-      "addedAt": "14:40, 21.08.21"
-    },
-    {
-      "id": 19,
-      "image": "animeAvatar19.png",
-      "name": "Название аниме19",
-      "series": 6,
-      "addedAt": "14:40, 21.08.21"
-    },
-    {
-      "id": 6,
-      "image": "animeAvatar6.png",
-      "name": "Название аниме6",
-      "series": 6,
-      "addedAt": "14:40, 21.08.21"
-    },
-    {
-      "id": 16,
-      "image": "animeAvatar16.png",
-      "name": "Название аниме16",
-      "series": 6,
-      "addedAt": "14:40, 21.08.21"
-    },
-    {
-      "id": 13,
-      "image": "animeAvatar13.png",
-      "name": "Название аниме13",
-      "series": 5,
-      "addedAt": "14:40, 21.08.21"
-    },
-    {
-      "id": 21,
-      "image": "animeAvatar21.png",
-      "name": "Название аниме21",
-      "series": 6,
-      "addedAt": "14:40, 21.08.21"
-    },
-    {
-      "id": 21,
-      "image": "animeAvatar21.png",
-      "name": "Название аниме21",
-      "series": 3,
-      "addedAt": "14:40, 21.08.21"
+      "avatar": "animeAvatar1.png",
+      "name": "Название аниме1"
     },
     {
       "id": 3,
-      "image": "animeAvatar3.png",
+      "avatar": "animeAvatar3.png",
+      "name": "Название аниме3"
+    },
+    {
+      "id": 4,
+      "avatar": "animeAvatar4.png",
+      "name": "Название аниме4"
+    },
+    {
+      "id": 5,
+      "avatar": "animeAvatar5.png",
+      "name": "Название аниме5"
+    },
+    {
+      "id": 14,
+      "avatar": "animeAvatar14.png",
+      "name": "Название аниме14"
+    },
+    {
+      "id": 19,
+      "avatar": "animeAvatar19.png",
+      "name": "Название аниме19"
+    }
+  ],
+  "newEpisodes": [
+    {
+      "id": 4,
+      "avatar": "animeAvatar4.png",
+      "name": "Название аниме4",
+      "series": 4,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 11,
+      "avatar": "animeAvatar11.png",
+      "name": "Название аниме11",
+      "series": 11,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 1,
+      "avatar": "animeAvatar1.png",
+      "name": "Название аниме1",
+      "series": 5,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 1,
+      "avatar": "animeAvatar1.png",
+      "name": "Название аниме1",
+      "series": 4,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 2,
+      "avatar": "animeAvatar2.png",
+      "name": "Название аниме2",
+      "series": 9,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 20,
+      "avatar": "animeAvatar20.png",
+      "name": "Название аниме20",
+      "series": 1,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 5,
+      "avatar": "animeAvatar5.png",
+      "name": "Название аниме5",
+      "series": 1,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 19,
+      "avatar": "animeAvatar19.png",
+      "name": "Название аниме19",
+      "series": 6,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 6,
+      "avatar": "animeAvatar6.png",
+      "name": "Название аниме6",
+      "series": 6,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 16,
+      "avatar": "animeAvatar16.png",
+      "name": "Название аниме16",
+      "series": 6,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 13,
+      "avatar": "animeAvatar13.png",
+      "name": "Название аниме13",
+      "series": 5,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 21,
+      "avatar": "animeAvatar21.png",
+      "name": "Название аниме21",
+      "series": 6,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 21,
+      "avatar": "animeAvatar21.png",
+      "name": "Название аниме21",
+      "series": 3,
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    },
+    {
+      "id": 3,
+      "avatar": "animeAvatar3.png",
       "name": "Название аниме3",
       "series": 3,
-      "addedAt": "14:40, 21.08.21"
+      "addedAt": "2021-08-26T23:54:26.697Z"
+    }
+  ],
+  "animeList": [
+    {
+      "id": 0,
+      "avatar": "animeAvatar.png",
+      "name": "Название аниме",
+      "views": 4156133,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 1,
+      "avatar": "animeAvatar1.png",
+      "name": "Название аниме1",
+      "views": 521561,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 2,
+      "avatar": "animeAvatar2.png",
+      "name": "Название аниме2",
+      "views": 913313,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 3,
+      "avatar": "animeAvatar3.png",
+      "name": "Название аниме3",
+      "views": 141342,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 4,
+      "avatar": "animeAvatar4.png",
+      "name": "Название аниме4",
+      "views": 167134,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 5,
+      "avatar": "animeAvatar5.png",
+      "name": "Название аниме5",
+      "views": 612411,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 6,
+      "avatar": "animeAvatar6.png",
+      "name": "Название аниме6",
+      "views": 612413,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 7,
+      "avatar": "animeAvatar7.png",
+      "name": "Название аниме7",
+      "views": 6712433,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 8,
+      "avatar": "animeAvatar8.png",
+      "name": "Название аниме8",
+      "views": 5126317,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 9,
+      "avatar": "animeAvatar9.png",
+      "name": "Название аниме9",
+      "views": 61713531,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 10,
+      "avatar": "animeAvatar10.png",
+      "name": "Название аниме10",
+      "views": 71353,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 11,
+      "avatar": "animeAvatar11.png",
+      "name": "Название аниме11",
+      "views": 71353,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 12,
+      "avatar": "animeAvatar12.png",
+      "name": "Название аниме12",
+      "views": 71353,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 13,
+      "avatar": "animeAvatar13.png",
+      "name": "Название аниме13",
+      "views": 71353,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 14,
+      "avatar": "animeAvatar14.png",
+      "name": "Название аниме14",
+      "views": 71353,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 15,
+      "avatar": "animeAvatar15.png",
+      "name": "Название аниме15",
+      "views": 71353,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 16,
+      "avatar": "animeAvatar16.png",
+      "name": "Название аниме16",
+      "views": 71353,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 17,
+      "avatar": "animeAvatar17.png",
+      "name": "Название аниме17",
+      "views": 71353,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 18,
+      "avatar": "animeAvatar18.png",
+      "name": "Название аниме18",
+      "views": 71353,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 19,
+      "avatar": "animeAvatar19.png",
+      "name": "Название аниме19",
+      "views": 71353,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 20,
+      "avatar": "animeAvatar20.png",
+      "name": "Название аниме20",
+      "views": 71353,
+      "series": [1,2,3,4,5,6,7,8]
+    },
+    {
+      "id": 21,
+      "avatar": "animeAvatar21.png",
+      "name": "Название аниме21",
+      "views": 71353,
+      "series": [1,2,3,4,5,6,7,8]
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "name": "Антон",
+      "surname": "Воронин",
+      "age": 23,
+      "country": "Россия",
+      "city": "Уфа",
+      "createdAt": "2014-01-22T11:37:37.995Z",
+      "avatar": "avatar.png",
+      "username": "AntonVoronin",
+      "vk": "https://vk.com/feed",
+      "facebook": "https://www.facebook.com/",
+      "twitter": "https://twitter.com/",
+      "notifications": [
+        {
+          "id": 4,
+          "avatar": "animeAvatar4.png",
+          "name": "Название аниме4",
+          "series": 4,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        },
+        {
+          "id": 11,
+          "avatar": "animeAvatar11.png",
+          "name": "Название аниме11",
+          "series": 11,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        },
+        {
+          "id": 4,
+          "avatar": "animeAvatar4.png",
+          "name": "Название аниме4",
+          "series": 1,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        },
+        {
+          "id": 19,
+          "avatar": "animeAvatar19.png",
+          "name": "Название аниме19",
+          "series": 6,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        },
+        {
+          "id": 13,
+          "avatar": "animeAvatar13.png",
+          "name": "Название аниме13",
+          "series": 5,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        }
+      ],
+      "chats": [
+        {
+          "id": 1,
+          "userName": "ZayacDmitry",
+          "avatar": "avatar.png",
+          "messages": [
+            {
+              "id": 0,
+              "message": "Привет, Димка!"
+            },
+            {
+              "id": 1,
+              "message": "Здарова, Антоха"
+            }
+          ]
+        }
+      ],
+      "friends": [
+        {
+          "id": 1,
+          "avatar": "avatar.png",
+          "username": "ZayacDmitry"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Дмитрий",
+      "surname": "Зайцев",
+      "age": 26,
+      "country": "Россия",
+      "city": "Москва",
+      "createdAt": "2015-03-17T11:37:37.995Z",
+      "avatar": "avatar.png",
+      "username": "ZayacDmitry",
+      "vk": "https://vk.com/feed",
+      "facebook": false,
+      "twitter": "https://twitter.com/",
+      "notifications": [
+        {
+          "id": 4,
+          "avatar": "animeAvatar4.png",
+          "name": "Название аниме4",
+          "series": 4,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        },
+        {
+          "id": 11,
+          "avatar": "animeAvatar11.png",
+          "name": "Название аниме11",
+          "series": 11,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        },
+        {
+          "id": 4,
+          "avatar": "animeAvatar4.png",
+          "name": "Название аниме4",
+          "series": 1,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        },
+        {
+          "id": 19,
+          "avatar": "animeAvatar19.png",
+          "name": "Название аниме19",
+          "series": 6,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        },
+        {
+          "id": 13,
+          "avatar": "animeAvatar13.png",
+          "name": "Название аниме13",
+          "series": 5,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        }
+      ],
+      "chats": [
+        {
+          "id": 0,
+          "userName": "AntonVoronin",
+          "avatar": "avatar.png",
+          "messages": [
+            {
+              "id": 0,
+              "message": "Привет, Димка!"
+            },
+            {
+              "id": 1,
+              "message": "Здарова, Антоха"
+            }
+          ]
+        }
+      ],
+      "friends": [
+        {
+          "id": 0,
+          "avatar": "avatar.png",
+          "username": "AntonVoronin"
+        }
+      ]
     }
   ]
 }
