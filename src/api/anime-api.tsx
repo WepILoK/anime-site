@@ -14,7 +14,7 @@ export const AnimeApi = {
         return data
     },
     async fetchTopAnimeList() {
-        const {data} = await axios.get('/animeList?_sort=views&_order=DESC?_limit=10')
+        const {data} = await axios.get('/animeList?_sort=views&_order=desc&_limit=10')
         return data
     },
 }

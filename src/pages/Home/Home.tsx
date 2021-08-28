@@ -1,8 +1,18 @@
 import React from 'react';
+// import format from "date-fns/format";
+// import ruLang from "date-fns/locale/ru";
 import './Home.scss'
+import {useSelector} from "react-redux";
+import {selectNewEpisodesList, selectPopularList, selectTopAnimeList} from "../../store/ducks/animeLists/selectors";
+import {formatDate} from "../../utils/formatDate";
 
 
 export const Home = () => {
+    const popularList = useSelector(selectPopularList)
+    const newEpisodesList = useSelector(selectNewEpisodesList)
+    const topAnimeList = useSelector(selectTopAnimeList)
+
+
     return (
         <div className='page__inner'>
             <div className='container'>
@@ -13,12 +23,12 @@ export const Home = () => {
                                 Популярное аниме текущего сезона
                             </div>
                             <div className='popular-list'>
-                                {new Array(6).fill(1).map(item =>
-                                    <div className='popular-list__item item'>
+                                {popularList.map(item =>
+                                    <div className='popular-list__item item' key={item.id}>
                                         <img className='item__image'
-                                             src={require("../../assets/images/animeAvatar.png").default}/>
+                                             src={require(`../../assets/images/${item.avatar}`).default}/>
                                         <div className='item__name'>
-                                            Место для названия аниме
+                                            {item.name}
                                         </div>
                                     </div>
                                 )}
@@ -74,23 +84,23 @@ export const Home = () => {
                         </div>
                         <div className='section__body'>
                             <div className='updates'>
-                                {new Array(15).fill('').map(i =>
-                                    <div className='updates__item'>
+                                {newEpisodesList.map(item =>
+                                    <div className='updates__item' key={'_' + item.id}>
                                         <img className='updates__avatar'
-                                             src={require("../../assets/images/animeAvatar.png").default}/>
+                                             src={require(`../../assets/images/${item.avatar}`).default}/>
                                         <div className='updates__content'>
                                             <div className='updates__header'>
                                                 <div className='updates__name'>
-                                                    Название аниме
+                                                    {item.name}
                                                 </div>
                                                 <div className='updates__date'>
-                                                    сегодня
+                                                    {formatDate(new Date(item.addedAt))}
                                                 </div>
                                             </div>
                                             <div className='updates__body'>
                                                 <div className='updates__series'>
                                                     <div className='updates__series_number'>
-                                                        Серия 1
+                                                        {item.series}
                                                     </div>
                                                 </div>
                                             </div>
@@ -149,17 +159,17 @@ export const Home = () => {
                             Топ аниме
                         </div>
                         <div className='list'>
-                            {new Array(10).fill('').map(i =>
+                            {topAnimeList.map(item =>
                                 <div className='anime-list-item'>
                                     <img className='anime-list-item__image'
                                          alt='animeAvatar'
-                                         src={require("../../assets/images/animeAvatar.png").default}/>
+                                         src={require(`../../assets/images/${item.avatar}`).default}/>
                                     <div className='anime-list-item__body'>
                                         <div className='anime-list-item__title'>
-                                            Название аниме
+                                            {item.name}
                                         </div>
                                         <div className='anime-list-item__subtitle'>
-                                            Просмотров: {' ' + 414151141}
+                                            Просмотров: {' ' + item.views}
                                         </div>
                                     </div>
                                 </div>)}
