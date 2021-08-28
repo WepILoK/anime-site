@@ -1,21 +1,15 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Redirect, Route, Switch } from 'react-router-dom';
-import './App.scss';
+
 import {Layout} from "./components/Layout/Layout";
 import {Home} from "./pages/Home/Home";
 import {User} from "./pages/User/User";
 import {HomeRoutes} from "./routes";
-import {useDispatch} from "react-redux";
-import {fetchAnimeLists} from "./store/ducks/animeLists/actionCreators";
+
+import './App.scss';
 
 
 export const App = () => {
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        dispatch(fetchAnimeLists())
-    }, [])
-
     return (
         <div className="App">
             <Layout>

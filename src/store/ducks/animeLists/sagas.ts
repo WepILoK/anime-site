@@ -1,6 +1,7 @@
 import {call, put, takeLatest} from "redux-saga/effects";
+
 import {setAnimeLists, setIsLoading} from "./actionCreators";
-import {ActionsType, } from "./contracts/actionTypes";
+import {ActionsType} from "./contracts/actionTypes";
 import {IAnimeListsState} from "./contracts/state";
 import {AnimeApi} from "../../../api/anime-api";
 
@@ -15,7 +16,7 @@ export function* fetchAnimeListsRequest() {
         yield put(setAnimeLists({animeList, newEpisodesList, popularList, topAnimeList}))
         yield put(setIsLoading(false))
     } catch (error) {
-        console.log('Ощибка загрузки данных с сервера\n' + error)
+        alert('Ощибка загрузки данных с сервера\n' + error)
     }
 }
 

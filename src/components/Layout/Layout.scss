@@ -54,10 +54,11 @@
     .user {
       display: flex;
       position: relative;
-
-      &__name {
-        padding: 7px 3px;
-        margin-left: 30px;
+      width: 228px;
+      &__login {
+        padding: 5px 8px;
+        margin: 4px 0;
+        margin-left: auto;
         text-align: end;
         cursor: pointer;
         @include noSelect

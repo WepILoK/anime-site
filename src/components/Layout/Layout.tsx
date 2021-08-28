@@ -95,12 +95,12 @@ export const Layout: React.FC = ({children}) => {
                                 <img src={require("../../assets/images/avatar.png").default} alt='Avatar'/>
                             </Link>
                         </div>
-                        {false ? (
-                            <div className='user__name text-cut'>
+                        {true ? (
+                            <div className='user__login hover'>
                                 Выйти
                             </div>
                         ) : (
-                            <div className='user__name'>
+                            <div className='user__login hover'>
                                 Войти
                             </div>
                         )}

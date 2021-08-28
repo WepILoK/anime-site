@@ -1,6 +1,7 @@
 import {RootState} from "../../store";
 import {IAnimeListsState} from "./contracts/state";
 
+
 export const selectAnimeListsState = (state: RootState): IAnimeListsState => state.animeLists
 
 export const selectAnimeList = (state: RootState): IAnimeListsState['animeList'] =>
@@ -14,3 +15,6 @@ export const selectNewEpisodesList = (state: RootState): IAnimeListsState['newEp
 
 export const selectTopAnimeList = (state: RootState): IAnimeListsState['topAnimeList'] =>
     selectAnimeListsState(state).topAnimeList
+
+export const selectIsLoading = (state: RootState): IAnimeListsState['isLoading'] =>
+    selectAnimeListsState(state).isLoading

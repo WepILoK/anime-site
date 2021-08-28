@@ -8,6 +8,7 @@ export interface IAnimeItem {
 
 export interface IEpisodeItem {
     id: number
+    animeId: number
     avatar: string
     name: string
     series: number
