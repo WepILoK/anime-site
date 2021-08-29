@@ -23,8 +23,8 @@ export const TopAnimeItems: React.FC<TopAnimeListProps> = ({isLoading, items}) =
                         backgroundColor="#f3f3f3"
                         foregroundColor="#ecebeb">
                         <rect x="0" y="10" rx="3" ry="3" width="70" height="105" />
-                        <rect x="86" y="10" rx="3" ry="3" width="150" height="21" />
-                        <rect x="86" y="41" rx="3" ry="3" width="150" height="10" />
+                        <rect x="82" y="13" rx="3" ry="3" width="170" height="17" />
+                        <rect x="82" y="35" rx="3" ry="3" width="170" height="13" />
                         <rect x="0" y="124" rx="0" ry="0" width="265" height="1" />
                     </ContentLoader>)}
             </>

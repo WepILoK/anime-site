@@ -3,6 +3,8 @@ import React from "react";
 
 export const HomeRoutes = {
     ROOT: '/',
+    LOGIN: '/login',
+    REGISTRATION: '/registration',
     FORUM: '/forum',
     CATALOG: '/catalog',
     USER: '/user'

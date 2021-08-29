@@ -7,6 +7,7 @@ import {User} from "./pages/User/User";
 import {HomeRoutes} from "./routes";
 
 import './App.scss';
+import {Authorization} from "./pages/Authorization/Authorization";
 
 
 export const App = () => {
@@ -15,6 +16,7 @@ export const App = () => {
             <Layout>
                 <Switch>
                     <Route path={HomeRoutes.ROOT} component={Home} exact/>
+                    <Route path={HomeRoutes.LOGIN} component={Authorization} exact/>
                     <Route path={HomeRoutes.USER}>
                         {false ? <Redirect to={HomeRoutes.ROOT} /> : <User/>}
                     </Route>

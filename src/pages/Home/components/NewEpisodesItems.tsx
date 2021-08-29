@@ -24,8 +24,8 @@ export const NewEpisodesItems: React.FC<NewEpisodesListProps> = ({isLoading, ite
                         backgroundColor="#f3f3f3"
                         foregroundColor="#ecebeb">
                         <rect x="0" y="0" rx="3" ry="3" width="100" height="150"/>
-                        <rect x="116" y="0" rx="3" ry="3" width="716" height="26"/>
-                        <rect x="116" y="38" rx="3" ry="3" width="716" height="26"/>
+                        <rect x="116" y="0" rx="3" ry="3" width="716" height="30"/>
+                        <rect x="116" y="40" rx="3" ry="3" width="150" height="26"/>
                         <rect x="0" y="161" rx="0" ry="0" width="832" height="1"/>
                     </ContentLoader>)}
             </>

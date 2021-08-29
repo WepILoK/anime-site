@@ -22,8 +22,8 @@ export const PopularItems: React.FC<PopularListItemProps> = ({items, isLoading})
                         viewBox="0 0 141 251.3"
                         backgroundColor="#f3f3f3"
                         foregroundColor="#ecebeb">
-                        <rect x="2" y="1" rx="3" ry="3" width="129" height="193"/>
-                        <rect x="2" y="200" rx="3" ry="3" width="129" height="40"/>
+                        <rect x="6" y="6" rx="3" ry="3" width="129" height="193"/>
+                        <rect x="6" y="210" rx="3" ry="3" width="129" height="35"/>
                     </ContentLoader>)}
             </>
         )
