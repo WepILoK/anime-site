@@ -10,7 +10,6 @@ export const User = () => {
 
 
     return (
-        <div className='page__inner'>
             <div className='container'>
                 <div className='container__left-side'>
                     <Route path={UserRoutes.NOTIFICATIONS} exact>
@@ -51,7 +50,6 @@ export const User = () => {
                     <Navbar/>
                 </div>
             </div>
-        </div>
     );
 };
 

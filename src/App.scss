@@ -32,20 +32,19 @@ $borderGrey: #e5e5e5;
   .button {
     height: 31px;
     border-radius: 5px;
-    padding-top: 4px;
+    padding: 5px 10px;
     color: #FFFFFF;
     cursor: pointer;
     background-color: $mainColor2;
     transition: background-color 0.1s ease-in-out;
+    @include noSelect;
 
     &:hover {
       background-color: lighten($mainColor2, 5%);
-      border-radius: 5px;
     }
 
     &:active {
       background-color: lighten($mainColor2, 8%);
-
     }
   }
 

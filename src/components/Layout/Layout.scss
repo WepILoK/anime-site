@@ -38,13 +38,10 @@
     }
 
     .menu {
+      display: flex;
+      justify-content: space-evenly;
+      width: 300px;
       padding: 11px 0;
-
-      &__item {
-        cursor: pointer;
-        padding: 5px 13px;
-
-      }
     }
 
     &__user {
@@ -56,12 +53,12 @@
       position: relative;
       width: 228px;
       &__login {
-        padding: 5px 8px;
+
         margin: 4px 0;
         margin-left: auto;
         text-align: end;
         cursor: pointer;
-        @include noSelect
+        @include noSelect;
       }
 
       &__image {
@@ -199,30 +196,13 @@
           }
 
           &__footer {
+            display: flex;
+            justify-content: center;
             padding: 15px;
             text-align: center;
             border-top: 1px solid #e5e5e5;
           }
-
-          &__button {
-            margin: 0 auto;
-            width: 155px;
-          }
         }
-      }
-    }
-
-    .hover {
-      transition: background-color 0.1s ease-in-out;
-
-      &:hover {
-        background-color: lighten($mainColor2, 5%);
-        border-radius: 5px;
-      }
-
-      &:active {
-        background-color: lighten($mainColor2, 8%);
-
       }
     }
   }

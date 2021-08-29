@@ -264,26 +264,8 @@
         }
 
         &__button {
-          width: 40px;
-          height: 25px;
-          padding: 0;
-          margin: auto 0 auto 4px;
-          cursor: pointer;
-          font-size: 14px;
+          margin: auto 2px;
           border: none;
-          border-radius: 5px;
-          color: #FFFFFF;
-          background-color: $mainColor2;
-          transition: background-color 0.1s ease-in-out;
-
-          &:hover {
-            background-color: lighten($mainColor2, 5%);
-          }
-
-          &:active {
-            background-color: lighten($mainColor2, 8%);
-
-          }
         }
       }
     }

@@ -20,21 +20,21 @@ export const Layout: React.FC = ({children}) => {
                         </Link>
                     </div>
                     <div className="header__menu menu">
-                        <div className='menu__item hover'>Каталог</div>
-                        <div className='menu__item hover'>Поиск</div>
-                        <div className='menu__item hover'>Форум</div>
+                        <div className='menu__item button'>Каталог</div>
+                        <div className='menu__item button'>Поиск</div>
+                        <div className='menu__item button'>Форум</div>
                     </div>
                     <div className="header__user user">
-                        {false ? (
+                        {true ? (
                             <>
-                                <div className='user__image hover'
+                                <div className='user__image button'
                                      onClick={toggleVisibleNotifications}>
                                     <img src={require("../../assets/images/notifications.svg").default}
                                          alt='notifications'/>
                                     <p className='text-cut'>{23}</p>
                                 </div>
                                 <Link to={UserRoutes.MESSAGES}>
-                                    <div className='user__image hover'>
+                                    <div className='user__image button'>
                                         <img src={require("../../assets/images/message.svg").default} alt='messages'/>
                                         <p className='text-cut'>{3}</p>
                                     </div>
@@ -99,18 +99,18 @@ export const Layout: React.FC = ({children}) => {
                                         <img src={require("../../assets/images/avatar.png").default} alt='Avatar'/>
                                     </Link>
                                 </div>
-                                <div className='user__login hover'>
+                                <div className='user__login button'>
                                     Выйти
                                 </div>
                             </>
                         ) : (
                             <>
-                                <Link to={HomeRoutes.LOGIN} className='user__login hover'>
+                                <Link to={HomeRoutes.LOGIN} className='user__login button'>
                                     <div>
                                         Войти
                                     </div>
                                 </Link>
-                                <Link to={HomeRoutes.REGISTRATION} className='user__login hover'>
+                                <Link to={HomeRoutes.REGISTRATION} className='user__login button'>
                                     <div>
                                         Регистрация
                                     </div>
@@ -121,7 +121,9 @@ export const Layout: React.FC = ({children}) => {
                 </div>
             </div>
             <div className='page' onClick={() => setVisibleNotifications(false)}>
-                {children}
+                <div className='page__inner'>
+                    {children}
+                </div>
             </div>
         </div>
     );
