@@ -22,7 +22,7 @@ export const Profile = () => {
                         </div>
                     </div>
                     <div className='profile__header-right'>
-                        <div className='profile__button button'>Отправить сообщение</div>
+                        <button className='profile__button button'>Отправить сообщение</button>
                         <div className='profile__button button'>Добавить в друзья</div>
                     </div>
                 </div>

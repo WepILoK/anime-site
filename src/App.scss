@@ -31,10 +31,12 @@ $borderGrey: #e5e5e5;
 
   .button {
     height: 31px;
+    font-size: 16px;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px 10px 6px;
     color: #FFFFFF;
     cursor: pointer;
+    border: none;
     background-color: $mainColor2;
     transition: background-color 0.1s ease-in-out;
     @include noSelect;

@@ -20,24 +20,24 @@ export const Layout: React.FC = ({children}) => {
                         </Link>
                     </div>
                     <div className="header__menu menu">
-                        <div className='menu__item button'>Каталог</div>
-                        <div className='menu__item button'>Поиск</div>
-                        <div className='menu__item button'>Форум</div>
+                        <button className='menu__item button'>Каталог</button>
+                        <button className='menu__item button'>Поиск</button>
+                        <button className='menu__item button'>Форум</button>
                     </div>
                     <div className="header__user user">
-                        {true ? (
+                        {false ? (
                             <>
-                                <div className='user__image button'
-                                     onClick={toggleVisibleNotifications}>
+                                <button className='user__image button'
+                                        onClick={toggleVisibleNotifications}>
                                     <img src={require("../../assets/images/notifications.svg").default}
                                          alt='notifications'/>
                                     <p className='text-cut'>{23}</p>
-                                </div>
+                                </button>
                                 <Link to={UserRoutes.MESSAGES}>
-                                    <div className='user__image button'>
+                                    <button className='user__image button'>
                                         <img src={require("../../assets/images/message.svg").default} alt='messages'/>
                                         <p className='text-cut'>{3}</p>
-                                    </div>
+                                    </button>
                                 </Link>
                                 {visibleNotifications && (
                                     <div className='user__dropdown'>
@@ -86,10 +86,10 @@ export const Layout: React.FC = ({children}) => {
                                             </div>
                                             <div className='notifications__footer'>
                                                 <Link to={UserRoutes.NOTIFICATIONS}>
-                                                    <div className='notifications__button button'
-                                                         onClick={() => setVisibleNotifications(false)}>
+                                                    <button className='notifications__button button'
+                                                            onClick={() => setVisibleNotifications(false)}>
                                                         Все уведомления
-                                                    </div>
+                                                    </button>
                                                 </Link>
                                             </div>
                                         </div>
@@ -99,22 +99,25 @@ export const Layout: React.FC = ({children}) => {
                                         <img src={require("../../assets/images/avatar.png").default} alt='Avatar'/>
                                     </Link>
                                 </div>
-                                <div className='user__login button'>
-                                    Выйти
+                                <div className='user__logout'>
+                                    <button className='button'>
+                                        Выйти
+                                    </button>
                                 </div>
                             </>
                         ) : (
                             <>
-                                <Link to={HomeRoutes.LOGIN} className='user__login button'>
-                                    <div>
-                                        Войти
-                                    </div>
-                                </Link>
-                                <Link to={HomeRoutes.REGISTRATION} className='user__login button'>
-                                    <div>
-                                        Регистрация
-                                    </div>
-                                </Link>
+                                <div  className='user__login'>
+                                    <Link to={HomeRoutes.LOGIN}>
+                                        <button className='button'>
+                                            Войти
+                                        </button>
+                                    </Link>
+                                    <Link to={HomeRoutes.REGISTRATION}>
+                                        <button className='button'>
+                                            Регистрация
+                                        </button>
+                                    </Link></div>
                             </>
                         )}
                     </div>

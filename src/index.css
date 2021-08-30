@@ -27,6 +27,14 @@ ol[class] {
     padding: 0;
 }
 
+textarea {
+    resize: none;
+}
+
+textarea, input:focus {
+    outline: none;
+}
+
 body,
 h1,
 h2,
@@ -43,6 +51,7 @@ dl,
 dd {
     margin: 0;
 }
+
 a {
     text-decoration: none;
     color: #fff;

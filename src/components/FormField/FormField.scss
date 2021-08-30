@@ -1,0 +1,31 @@
+@import 'src/App';
+
+.field {
+  position: relative;
+  &__label {
+    height: 25px;
+    font-weight: 700;
+    font-size: 16px;
+    color: $mainColor2;
+    background-color: #fff;
+    @include noSelect;
+  }
+  &__input {
+    height: 31px;
+    width: 100%;
+    padding: 7px 7px 5px;
+    border-radius: 9px;
+    border: 1px solid $borderGrey;
+
+  }
+  .error {
+    border: 1px solid $errorColor;
+  }
+  &__error {
+    height: 23px;
+    padding: 0 7px 3px;
+    color: $errorColor;
+    font-weight: 500;
+    font-size: 14px;
+  }
+}

@@ -17,6 +17,7 @@ export const App = () => {
                 <Switch>
                     <Route path={HomeRoutes.ROOT} component={Home} exact/>
                     <Route path={HomeRoutes.LOGIN} component={Authorization} exact/>
+                    <Route path={HomeRoutes.REGISTRATION} component={Authorization} exact/>
                     <Route path={HomeRoutes.USER}>
                         {false ? <Redirect to={HomeRoutes.ROOT} /> : <User/>}
                     </Route>

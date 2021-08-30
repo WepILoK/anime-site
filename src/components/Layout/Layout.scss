@@ -53,12 +53,20 @@
       position: relative;
       width: 228px;
       &__login {
-
-        margin: 4px 0;
-        margin-left: auto;
+        display: flex;
+        justify-content:flex-end;
+        width: 100%;
         text-align: end;
-        cursor: pointer;
-        @include noSelect;
+        .button {
+          margin-left: 15px;
+        }
+      }
+      &__logout {
+        padding-top: 4px;
+        text-align: end;
+        .button {
+          margin-left: 15px;
+        }
       }
 
       &__image {
@@ -78,7 +86,7 @@
           right: -7px;
           height: 21px;
           width: 21px;
-          padding: 1px 0 0 0;
+          padding-top: 3px;
           font-size: 13px;
           font-weight: 500;
           background-color: #000000;
