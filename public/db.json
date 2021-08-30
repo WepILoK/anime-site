@@ -380,46 +380,7 @@
       "facebook": "https://www.facebook.com/",
       "twitter": "https://twitter.com/",
       "notifications": [
-        {
-          "id": 4,
-          "avatar": "animeAvatar4.png",
-          "name": "Название аниме 4",
-          "series": 4,
-          "translationTeam": "Translation-Team",
-          "addedAt": "14:40, 21.08.21"
-        },
-        {
-          "id": 11,
-          "avatar": "animeAvatar11.png",
-          "name": "Название аниме 11",
-          "series": 11,
-          "translationTeam": "Translation-Team",
-          "addedAt": "14:40, 21.08.21"
-        },
-        {
-          "id": 4,
-          "avatar": "animeAvatar4.png",
-          "name": "Название аниме 4",
-          "series": 1,
-          "translationTeam": "Translation-Team",
-          "addedAt": "14:40, 21.08.21"
-        },
-        {
-          "id": 19,
-          "avatar": "animeAvatar19.png",
-          "name": "Название аниме 19",
-          "series": 6,
-          "translationTeam": "Translation-Team",
-          "addedAt": "14:40, 21.08.21"
-        },
-        {
-          "id": 13,
-          "avatar": "animeAvatar13.png",
-          "name": "Название аниме 13",
-          "series": 5,
-          "translationTeam": "Translation-Team",
-          "addedAt": "14:40, 21.08.21"
-        }
+
       ],
       "chats": [
         {

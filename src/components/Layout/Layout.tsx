@@ -3,10 +3,11 @@ import {Link} from 'react-router-dom';
 import './Layout.scss'
 import {AuthRoutes, HomeRoutes, UserRoutes} from "../../routes";
 import {useSelector} from "react-redux";
-import {selectIsAuth} from "../../store/ducks/user/selectors";
+import {selectIsAuth, selectUserData} from "../../store/ducks/user/selectors";
 
 export const Layout: React.FC = ({children}) => {
     const isAuth = useSelector(selectIsAuth)
+    const userData = useSelector(selectUserData)
     const [visibleNotifications, setVisibleNotifications] = useState(false)
 
     const toggleVisibleNotifications = () => {
@@ -34,7 +35,7 @@ export const Layout: React.FC = ({children}) => {
                                         onClick={toggleVisibleNotifications}>
                                     <img src={require("../../assets/images/notifications.svg").default}
                                          alt='notifications'/>
-                                    <p className='text-cut'>{23}</p>
+                                    {userData.notifications.length > 0 && (<p className='text-cut'>{userData.notifications.length}</p>)}
                                 </button>
                                 <Link to={UserRoutes.MESSAGES}>
                                     <button className='user__image button'>
@@ -51,31 +52,29 @@ export const Layout: React.FC = ({children}) => {
                                                 </div>
                                             </div>
                                             <div className='notifications__content'>
-                                                {true
+                                                {userData.notifications.length
                                                     ? (<div className='notifications__list'>
-                                                        {new Array(10).fill('').map(i =>
-                                                            <div className='notification-row'>
+                                                        {userData.notifications.map(item =>
+                                                            <div className='notification-row' key={item.id}>
                                                                 <div className='notification-item'>
                                                                     <img className='notification-item__image'
-                                                                         src={require("../../assets/images/animeAvatar.png").default}/>
+                                                                         src={require(`../../assets/images/${item.avatar}`).default}/>
                                                                     <div className='notification-item__info'>
                                                                         <div className='notification-item__meta'>
                                                                             <div
                                                                                 className='notification-item__command-name text-cut'>
-                                                                                Переводчик
+                                                                                {item.translationTeam}
                                                                             </div>
                                                                             <div className='notification-item__date'>
-                                                                                около 1 часа назад
+                                                                                {item.addedAt}
                                                                             </div>
                                                                         </div>
                                                                         <div className='notification-item__body'>
-                                                                            Новая 1 серия <br/>
+                                                                            Новая {item.series} серия <br/>
                                                                             <div className='notification-item__text'>
                                                                                 В аниме:
-                                                                                <div
-                                                                                    className='notification-item__name text-cut'>
-                                                                                    Название аниме Название аниме
-                                                                                    Название аниме
+                                                                                <div className='notification-item__name text-cut'>
+                                                                                    {item.name}
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -110,7 +109,7 @@ export const Layout: React.FC = ({children}) => {
                             </>
                         ) : (
                             <>
-                                <div  className='user__login'>
+                                <div className='user__login'>
                                     <Link to={AuthRoutes.LOGIN}>
                                         <button className='button'>
                                             Войти

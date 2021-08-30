@@ -5,7 +5,7 @@ import {IUserActions, UserActionsType} from "./contracts/actionTypes";
 
 const initialState: IUserState = {
     isAuth: false,
-    user: null as IUserState['user'],
+    user: [],
     status: Status.NEVER
 }
 

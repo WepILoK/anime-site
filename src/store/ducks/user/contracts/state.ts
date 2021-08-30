@@ -51,7 +51,7 @@ export enum Status {
 }
 
 export interface IUserState {
-    user: IUserData | null
+    user: IUserData[]
     isAuth: boolean
     status: Status
 }

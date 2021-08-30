@@ -8,7 +8,7 @@ import {UserActionsType} from "./contracts/actionTypes";
 export function* fetchSignInRequest({payload}: any) {
     try {
         const user: IUserState['user'] = yield call(UserApi.signIn, payload)
-        if (user) {
+        if (user.length === 1) {
             yield put(setUserData(user))
             yield put(setUserStatus(Status.SUCCESS))
             yield put(setIsAuth(true))
