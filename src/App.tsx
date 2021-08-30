@@ -4,7 +4,7 @@ import {Redirect, Route, Switch } from 'react-router-dom';
 import {Layout} from "./components/Layout/Layout";
 import {Home} from "./pages/Home/Home";
 import {User} from "./pages/User/User";
-import {HomeRoutes} from "./routes";
+import {AuthRoutes, HomeRoutes} from "./routes";
 
 import './App.scss';
 import {Authorization} from "./pages/Authorization/Authorization";
@@ -16,8 +16,7 @@ export const App = () => {
             <Layout>
                 <Switch>
                     <Route path={HomeRoutes.ROOT} component={Home} exact/>
-                    <Route path={HomeRoutes.LOGIN} component={Authorization} exact/>
-                    <Route path={HomeRoutes.REGISTRATION} component={Authorization} exact/>
+                    <Route path={AuthRoutes.AUTH} component={Authorization}/>
                     <Route path={HomeRoutes.USER}>
                         {false ? <Redirect to={HomeRoutes.ROOT} /> : <User/>}
                     </Route>

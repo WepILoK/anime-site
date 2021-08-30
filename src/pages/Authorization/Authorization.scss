@@ -1,13 +1,10 @@
 @import "src/App";
 
-.section {
+
+.authorization {
   width: 400px;
   max-width: 500px;
   margin: 0 auto;
-.authorization {
-
-
-
 
   &__header {
     text-align: center;
@@ -16,17 +13,20 @@
     font-weight: 600;
     border-bottom: 1px solid #1b3e99;
   }
+
   &__fields {
     padding: 10px 20px;
   }
+
   .form__buttons {
     display: flex;
     width: 100%;
     justify-content: space-around;
     padding-bottom: 15px;
+
     .button {
       padding: 3px 5px;
     }
+
   }
-}
 }

@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Layout.scss'
-import {HomeRoutes, UserRoutes} from "../../routes";
+import {AuthRoutes, HomeRoutes, UserRoutes} from "../../routes";
 
 export const Layout: React.FC = ({children}) => {
     const [visibleNotifications, setVisibleNotifications] = useState(false)
@@ -108,12 +108,12 @@ export const Layout: React.FC = ({children}) => {
                         ) : (
                             <>
                                 <div  className='user__login'>
-                                    <Link to={HomeRoutes.LOGIN}>
+                                    <Link to={AuthRoutes.LOGIN}>
                                         <button className='button'>
                                             Войти
                                         </button>
                                     </Link>
-                                    <Link to={HomeRoutes.REGISTRATION}>
+                                    <Link to={AuthRoutes.REGISTRATION}>
                                         <button className='button'>
                                             Регистрация
                                         </button>

@@ -1,18 +1,19 @@
 import React from 'react';
 import './Authorization.scss'
-import {useHistory} from "react-router-dom";
+import {Route} from "react-router-dom";
 import {LoginPage} from "./components/Login";
 import {RegisterPage} from "./components/Register";
+import {AuthRoutes} from "../../routes";
 
 
 export const Authorization = () => {
-    const history = useHistory()
 
     return (
         <div className='container'>
-            <div className='section'>
-                <div className='authorization'>
-                    {history.location.pathname === '/login' ? (<LoginPage/>) : (<RegisterPage/>)}
+            <div className='authorization'>
+                <div className='section'>
+                    <Route path={AuthRoutes.LOGIN} component={LoginPage} exact/>
+                    <Route path={AuthRoutes.REGISTRATION} component={RegisterPage} exact/>
                 </div>
             </div>
         </div>

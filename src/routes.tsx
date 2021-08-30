@@ -1,10 +1,13 @@
 import React from "react";
 
+export const AuthRoutes = {
+    AUTH: '/auth',
+    LOGIN: '/auth/login',
+    REGISTRATION: '/auth/registration',
+}
 
 export const HomeRoutes = {
     ROOT: '/',
-    LOGIN: '/login',
-    REGISTRATION: '/registration',
     FORUM: '/forum',
     CATALOG: '/catalog',
     USER: '/user'
