@@ -8,7 +8,6 @@ import {Chat} from "./components/Chat/Chat";
 
 export const User = () => {
 
-
     return (
             <div className='container'>
                 <div className='container__left-side'>

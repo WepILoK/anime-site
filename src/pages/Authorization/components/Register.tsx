@@ -22,7 +22,7 @@ export const RegisterPage = () => {
                     <FormField label='Почта' name='email' placeholder='Введите вашу почту'/>
                     <FormField label='Логин' name='userName' placeholder='Введите ваш логин'/>
                     <FormField label='Пароль' name='password' placeholder='Введите ваш пароль'/>
-                    <FormField label='Пароль' name='password2' type='password' placeholder='Подтвердите ваш пароль'/>
+                    <FormField label='Пароль' name='password2' type='password' placeholder='Повторите пароль'/>
                 </div>
                 <div className='form__buttons'>
                     <button className='button'

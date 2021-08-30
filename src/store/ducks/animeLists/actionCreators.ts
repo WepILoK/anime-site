@@ -1,13 +1,13 @@
-import {ActionsType, IFetchAnimeLists, ISetAnimeLists, ISetIsLoading} from "./contracts/actionTypes";
+import {AnimeListsActionsType, IFetchAnimeLists, ISetAnimeLists, ISetIsLoading} from "./contracts/actionTypes";
 import {IAnimeListsState} from "./contracts/state";
 
 export const setIsLoading = (payload: boolean): ISetIsLoading => ({
-    type: ActionsType.SET_IS_LOADING,
+    type: AnimeListsActionsType.SET_IS_LOADING,
     payload
 });
 
 export const fetchAnimeLists = (): IFetchAnimeLists => ({
-    type: ActionsType.FETCH_ANIME_LISTS
+    type: AnimeListsActionsType.FETCH_ANIME_LISTS
 })
 
 export const setAnimeLists = (payload: {
@@ -16,7 +16,7 @@ export const setAnimeLists = (payload: {
     newEpisodesList: IAnimeListsState['newEpisodesList'],
     topAnimeList: IAnimeListsState['topAnimeList'],
 }): ISetAnimeLists => ({
-    type: ActionsType.SET_ANIME_LISTS,
+    type: AnimeListsActionsType.SET_ANIME_LISTS,
     payload
 })
 

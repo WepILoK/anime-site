@@ -8,17 +8,23 @@ import {AuthRoutes, HomeRoutes} from "./routes";
 
 import './App.scss';
 import {Authorization} from "./pages/Authorization/Authorization";
+import {useSelector} from "react-redux";
+import {selectIsAuth} from "./store/ducks/user/selectors";
 
 
 export const App = () => {
+    const isAuth = useSelector(selectIsAuth)
+
     return (
         <div className="App">
             <Layout>
                 <Switch>
                     <Route path={HomeRoutes.ROOT} component={Home} exact/>
-                    <Route path={AuthRoutes.AUTH} component={Authorization}/>
+                    <Route path={AuthRoutes.AUTH}>
+                        {isAuth ? <Redirect to={HomeRoutes.ROOT}/> : <Authorization/>}
+                    </Route>
                     <Route path={HomeRoutes.USER}>
-                        {false ? <Redirect to={HomeRoutes.ROOT} /> : <User/>}
+                        {isAuth ? <User/> : <Redirect to={HomeRoutes.ROOT} />}
                     </Route>
                 </Switch>
             </Layout>

@@ -3,14 +3,19 @@ import {FormField} from "../../../components/FormField/FormField";
 import {FormProvider, useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {loginFormSchema} from "../../../utils/validations";
+import {useDispatch} from "react-redux";
+import {fetchSignIn} from "../../../store/ducks/user/actionCreators";
 
 export const LoginPage = () => {
+    const dispatch = useDispatch()
     const form = useForm({
         mode: 'onSubmit',
         resolver: yupResolver(loginFormSchema)
     })
 
-    const onSubmit = (data: any) => console.log(data);
+    const onSubmit = (data: any) => {
+        dispatch(fetchSignIn(data))
+    };
 
     return (
         <FormProvider {...form}>

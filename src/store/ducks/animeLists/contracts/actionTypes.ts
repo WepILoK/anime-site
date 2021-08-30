@@ -2,7 +2,7 @@ import {Action} from "redux";
 import {IAnimeListsState} from "./state";
 
 
-export enum ActionsType {
+export enum AnimeListsActionsType {
     SET_IS_LOADING = "animeList/SET_IS_LOADING",
     FETCH_ANIME_LISTS = "animeList/FETCH_ANIME_LISTS",
     SET_ANIME_LISTS = "animeList/SET_ANIME_LISTS",
@@ -13,17 +13,17 @@ export enum ActionsType {
     SET_TOP_ANIME_LIST = "animeList/SET_TOP_ANIME_LIST",
 }
 
-export interface ISetIsLoading extends Action<ActionsType> {
-    type: ActionsType.SET_IS_LOADING
+export interface ISetIsLoading extends Action<AnimeListsActionsType> {
+    type: AnimeListsActionsType.SET_IS_LOADING
     payload: boolean
 }
 
-export interface IFetchAnimeLists extends Action<ActionsType> {
-    type: ActionsType.FETCH_ANIME_LISTS
+export interface IFetchAnimeLists extends Action<AnimeListsActionsType> {
+    type: AnimeListsActionsType.FETCH_ANIME_LISTS
 }
 
-export interface ISetAnimeLists extends Action<ActionsType> {
-    type: ActionsType.SET_ANIME_LISTS
+export interface ISetAnimeLists extends Action<AnimeListsActionsType> {
+    type: AnimeListsActionsType.SET_ANIME_LISTS
     payload: {
         animeList: IAnimeListsState['animeList'],
         popularList: IAnimeListsState['popularList'],
@@ -32,7 +32,7 @@ export interface ISetAnimeLists extends Action<ActionsType> {
     }
 }
 
-export type IActions =
+export type IAnimeListsActions =
     ISetIsLoading
     | IFetchAnimeLists
     | ISetAnimeLists

@@ -1,7 +1,7 @@
 import {call, put, takeLatest} from "redux-saga/effects";
 
 import {setAnimeLists, setIsLoading} from "./actionCreators";
-import {ActionsType} from "./contracts/actionTypes";
+import {AnimeListsActionsType} from "./contracts/actionTypes";
 import {IAnimeListsState} from "./contracts/state";
 import {AnimeApi} from "../../../api/anime-api";
 
@@ -21,5 +21,5 @@ export function* fetchAnimeListsRequest() {
 }
 
 export function* AnimeListsSaga() {
-    yield takeLatest(ActionsType.FETCH_ANIME_LISTS, fetchAnimeListsRequest)
+    yield takeLatest(AnimeListsActionsType.FETCH_ANIME_LISTS, fetchAnimeListsRequest)
 }

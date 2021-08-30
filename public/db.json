@@ -373,7 +373,7 @@
       "city": "Уфа",
       "createdAt": "2014-01-22T11:37:37.995Z",
       "avatar": "avatar.png",
-      "username": "AntonVoronin",
+      "userName": "AntonVoronin",
       "email": "test1@gmail.com",
       "password": "12345test",
       "vk": "https://vk.com/feed",
@@ -442,7 +442,7 @@
         {
           "id": 1,
           "avatar": "avatar.png",
-          "username": "ZayacDmitry"
+          "userName": "ZayacDmitry"
         }
       ]
     },
@@ -455,7 +455,7 @@
       "city": "Москва",
       "createdAt": "2015-03-17T11:37:37.995Z",
       "avatar": "avatar.png",
-      "username": "ZayacDmitry",
+      "userName": "ZayacDmitry",
       "email": "test2@gmail.com",
       "password": "12345test",
       "vk": "https://vk.com/feed",
@@ -524,7 +524,7 @@
         {
           "id": 0,
           "avatar": "avatar.png",
-          "username": "AntonVoronin"
+          "userName": "AntonVoronin"
         }
       ]
     }

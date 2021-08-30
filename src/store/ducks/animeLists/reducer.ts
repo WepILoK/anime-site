@@ -1,6 +1,6 @@
 import produce, {Draft} from "immer";
 
-import {ActionsType, IActions} from "./contracts/actionTypes";
+import {AnimeListsActionsType, IAnimeListsActions} from "./contracts/actionTypes";
 import {IAnimeListsState} from "./contracts/state";
 
 
@@ -12,12 +12,12 @@ const initialState: IAnimeListsState = {
     isLoading: true
 }
 
-export const animeListsReducer = produce((draft: Draft<IAnimeListsState>, action: IActions) => {
+export const animeListsReducer = produce((draft: Draft<IAnimeListsState>, action: IAnimeListsActions) => {
     switch (action.type) {
-        case ActionsType.SET_IS_LOADING:
+        case AnimeListsActionsType.SET_IS_LOADING:
             draft.isLoading = action.payload
             break;
-        case ActionsType.SET_ANIME_LISTS:
+        case AnimeListsActionsType.SET_ANIME_LISTS:
             draft.topAnimeList = action.payload.topAnimeList
             draft.animeList = action.payload.animeList
             draft.popularList = action.payload.popularList

@@ -2,8 +2,11 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Layout.scss'
 import {AuthRoutes, HomeRoutes, UserRoutes} from "../../routes";
+import {useSelector} from "react-redux";
+import {selectIsAuth} from "../../store/ducks/user/selectors";
 
 export const Layout: React.FC = ({children}) => {
+    const isAuth = useSelector(selectIsAuth)
     const [visibleNotifications, setVisibleNotifications] = useState(false)
 
     const toggleVisibleNotifications = () => {
@@ -25,7 +28,7 @@ export const Layout: React.FC = ({children}) => {
                         <button className='menu__item button'>Форум</button>
                     </div>
                     <div className="header__user user">
-                        {false ? (
+                        {isAuth ? (
                             <>
                                 <button className='user__image button'
                                         onClick={toggleVisibleNotifications}>
