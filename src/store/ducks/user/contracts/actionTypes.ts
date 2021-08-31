@@ -16,6 +16,10 @@ export interface ISetIsAuth extends Action<UserActionsType> {
     payload: boolean
 }
 
+export interface IFetchUserData extends Action<UserActionsType> {
+    type: UserActionsType.FETCH_USER_DATA
+}
+
 export interface IFetchSignIn extends Action<UserActionsType> {
     type: UserActionsType.FETCH_SIGN_IN
     payload: any
@@ -37,4 +41,5 @@ export type IUserActions =
     | IFetchSignIn
     | ISetUserData
     | ISetUserStatus
+    | IFetchUserData
 

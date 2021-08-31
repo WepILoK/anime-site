@@ -29,6 +29,7 @@ export interface IUserData {
     userName: string
     password: string
     createdAt: string
+    token: string
     name?: string
     surname?: string
     age?: number

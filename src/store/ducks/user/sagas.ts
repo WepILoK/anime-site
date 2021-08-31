@@ -10,6 +10,7 @@ export function* fetchSignInRequest({payload}: any) {
         const user: IUserState['user'] = yield call(UserApi.signIn, payload)
         if (user.length === 1) {
             yield put(setUserData(user))
+            window.localStorage.setItem('token', user[0].token)
             yield put(setUserStatus(Status.SUCCESS))
             yield put(setIsAuth(true))
         } else {
@@ -21,6 +22,23 @@ export function* fetchSignInRequest({payload}: any) {
     }
 }
 
+export function* fetchUserDataRequest() {
+    try {
+        const user: IUserState['user'] = yield call(UserApi.getMe)
+        if (user.length === 1) {
+            yield put(setUserData(user))
+            yield put(setUserStatus(Status.SUCCESS))
+            yield put(setIsAuth(true))
+        } else {
+            yield put(setUserStatus(Status.ERROR))
+        }
+    } catch (error) {
+        yield put(setUserStatus(Status.ERROR))
+    }
+
+}
+
 export function* UserSaga() {
     yield takeLatest(UserActionsType.FETCH_SIGN_IN, fetchSignInRequest)
+    yield takeLatest(UserActionsType.FETCH_USER_DATA, fetchUserDataRequest)
 }

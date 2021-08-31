@@ -1,4 +1,11 @@
-import {IFetchSignIn, ISetIsAuth, ISetUserData, ISetUserStatus, UserActionsType} from "./contracts/actionTypes";
+import {
+    IFetchSignIn,
+    IFetchUserData,
+    ISetIsAuth,
+    ISetUserData,
+    ISetUserStatus,
+    UserActionsType
+} from "./contracts/actionTypes";
 import {IUserState} from "./contracts/state";
 
 
@@ -10,6 +17,10 @@ export const setIsAuth = (payload: boolean): ISetIsAuth => ({
 export const fetchSignIn = (payload: any): IFetchSignIn => ({
     type: UserActionsType.FETCH_SIGN_IN,
     payload
+});
+
+export const fetchUserData = (): IFetchUserData => ({
+    type: UserActionsType.FETCH_USER_DATA
 });
 
 export const setUserData = (payload: IUserState['user']): ISetUserData => ({

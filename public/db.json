@@ -213,154 +213,352 @@
       "avatar": "animeAvatar.png",
       "name": "Название аниме",
       "views": 4156133,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 1,
       "avatar": "animeAvatar1.png",
       "name": "Название аниме 1",
       "views": 521561,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 2,
       "avatar": "animeAvatar2.png",
       "name": "Название аниме 2",
       "views": 913313,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 3,
       "avatar": "animeAvatar3.png",
       "name": "Название аниме 3",
       "views": 141342,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 4,
       "avatar": "animeAvatar4.png",
       "name": "Название аниме 4",
       "views": 167134,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 5,
       "avatar": "animeAvatar5.png",
       "name": "Название аниме 5",
       "views": 612411,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 6,
       "avatar": "animeAvatar6.png",
       "name": "Название аниме 6",
       "views": 612413,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 7,
       "avatar": "animeAvatar7.png",
       "name": "Название аниме 7",
       "views": 6712433,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 8,
       "avatar": "animeAvatar8.png",
       "name": "Название аниме 8",
       "views": 5126317,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 9,
       "avatar": "animeAvatar9.png",
       "name": "Название аниме 9",
       "views": 61713531,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 10,
       "avatar": "animeAvatar10.png",
       "name": "Название аниме 10",
       "views": 71353,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 11,
       "avatar": "animeAvatar11.png",
       "name": "Название аниме 11",
       "views": 71353,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 12,
       "avatar": "animeAvatar12.png",
       "name": "Название аниме 12",
       "views": 71353,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 13,
       "avatar": "animeAvatar13.png",
       "name": "Название аниме 13",
       "views": 71353,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 14,
       "avatar": "animeAvatar14.png",
       "name": "Название аниме 14",
       "views": 71353,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 15,
       "avatar": "animeAvatar15.png",
       "name": "Название аниме 15",
       "views": 71353,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 16,
       "avatar": "animeAvatar16.png",
       "name": "Название аниме 16",
       "views": 71353,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 17,
       "avatar": "animeAvatar17.png",
       "name": "Название аниме 17",
       "views": 71353,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 18,
       "avatar": "animeAvatar18.png",
       "name": "Название аниме 18",
       "views": 71353,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 19,
       "avatar": "animeAvatar19.png",
       "name": "Название аниме 19",
       "views": 71353,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 20,
       "avatar": "animeAvatar20.png",
       "name": "Название аниме 20",
       "views": 71353,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": 21,
       "avatar": "animeAvatar21.png",
       "name": "Название аниме 21",
       "views": 71353,
-      "series": [1,2,3,4,5,6,7,8]
+      "series": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     }
   ],
   "users": [
@@ -376,11 +574,51 @@
       "userName": "AntonVoronin",
       "email": "test1@gmail.com",
       "password": "12345test",
+      "token": "1NiIsInR5cCI6IkpXVCJ90",
       "vk": "https://vk.com/feed",
       "facebook": "https://www.facebook.com/",
       "twitter": "https://twitter.com/",
       "notifications": [
-
+        {
+          "id": 4,
+          "avatar": "animeAvatar4.png",
+          "name": "Название аниме 4",
+          "series": 4,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        },
+        {
+          "id": 11,
+          "avatar": "animeAvatar11.png",
+          "name": "Название аниме 11",
+          "series": 11,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        },
+        {
+          "id": 4,
+          "avatar": "animeAvatar4.png",
+          "name": "Название аниме 4",
+          "series": 1,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        },
+        {
+          "id": 19,
+          "avatar": "animeAvatar19.png",
+          "name": "Название аниме 19",
+          "series": 6,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        },
+        {
+          "id": 13,
+          "avatar": "animeAvatar13.png",
+          "name": "Название аниме 13",
+          "series": 5,
+          "translationTeam": "Translation-Team",
+          "addedAt": "14:40, 21.08.21"
+        }
       ],
       "chats": [
         {
@@ -395,6 +633,14 @@
             {
               "id": 1,
               "message": "Здарова, Антоха"
+            },
+            {
+              "id": 1,
+              "message": "Ты смотрел новую серию 'Название аниме'?"
+            },
+            {
+              "id": 0,
+              "message": "ДА! Она шикарна))"
             }
           ]
         }
@@ -419,6 +665,7 @@
       "userName": "ZayacDmitry",
       "email": "test2@gmail.com",
       "password": "12345test",
+      "token": "1NiIsInR5cCI6IkpXVCJ91",
       "vk": "https://vk.com/feed",
       "facebook": false,
       "twitter": "https://twitter.com/",

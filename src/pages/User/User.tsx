@@ -42,8 +42,8 @@ export const User = () => {
                             </div>
                         </div>
                     </Route>
-                    <Route path={UserRoutes.PROFILE} exact component={Profile}/>
-                    <Route path={UserRoutes.MESSAGES} exact component={Chat}/>
+                    <Route path={UserRoutes.PROFILE} component={Profile}/>
+                    <Route path={UserRoutes.MESSAGES} component={Chat}/>
                 </div>
                 <div className='container__right-side'>
                     <Navbar/>

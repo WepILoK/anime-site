@@ -5,4 +5,8 @@ export const UserApi = {
         const {data} = await axios.get(`/users?email=${postData.email}&password=${postData.password}`)
         return data
     },
+    async getMe() {
+        const {data} = await axios.get(`/users/?token=${window.localStorage.getItem('token')}`)
+        return data
+    },
 }
