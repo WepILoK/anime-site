@@ -16,7 +16,7 @@ export function* fetchAnimeListsRequest() {
         yield put(setAnimeLists({animeList, newEpisodesList, popularList, topAnimeList}))
         yield put(setIsLoading(false))
     } catch (error) {
-        alert('Ощибка загрузки данных с сервера\n' + error)
+        alert('Ощибка загрузки данных с сервера\n' + error.message)
     }
 }
 

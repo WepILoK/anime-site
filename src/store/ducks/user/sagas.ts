@@ -18,7 +18,7 @@ export function* fetchSignInRequest({payload}: any) {
         }
     } catch (error) {
         yield put(setUserStatus(Status.ERROR))
-        alert('Ощибка загрузки данных с сервера\n' + error)
+        alert('Ощибка загрузки данных с сервера\n' + error.message)
     }
 }
 

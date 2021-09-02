@@ -3,11 +3,10 @@ import './Chat.scss'
 import {useSelector} from "react-redux";
 import {selectUserData} from "../../../../store/ducks/user/selectors";
 import {Link, Route, useParams} from 'react-router-dom';
-import {UserRoutes} from "../../../../routes";
+import {HomeRoutes, UserRoutes} from "../../../../routes";
 
 export const Chat = () => {
     const chats = useSelector(selectUserData).chats
-    const arr = [1, 2, 1, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 1, 2, 1]
 
     return (
         <div className='section'>
@@ -35,10 +34,9 @@ export const Chat = () => {
                     </div>
                 </div>
                 <div className='chat__messages'>
-                        <Route path={UserRoutes.MESSAGES + '/:id'}>
-                            <Messages/>
-                        </Route>
-
+                    <Route path={UserRoutes.MESSAGES + '/:id'}>
+                        <Messages/>
+                    </Route>
                 </div>
             </div>
         </div>
@@ -46,20 +44,23 @@ export const Chat = () => {
 };
 
 const Messages = () => {
-    const {chats, id}= useSelector(selectUserData)
+    const {chats, id} = useSelector(selectUserData)
     const params: { id: string } = useParams();
     const chat = chats.filter(item => item.id === +params.id);
+
     return (
         <div className='messages'>
-            <div className='messages__author'>
-                <h4 className='text-cut'>
-                    {chat[0].userName}
-                </h4>
-            </div>
+            <Link to={HomeRoutes.ANOTHER_USER + `${params.id}`}>
+                <div className='messages__author'>
+                    <h4 className='text-cut'>
+                        {chat[0].userName}
+                    </h4>
+                </div>
+            </Link>
             <div className='messages__list'>
-                {chat[0].messages.map(item =>
+                {chat[0].messages.map((item, index) =>
                     item.id === id ? (
-                        <div className='message'>
+                        <div className='message' key={item.id + `_${index}`}>
                             <div className='message__bubble user'>
                                 <span>
                                     {item.message}
@@ -67,7 +68,7 @@ const Messages = () => {
                             </div>
                         </div>
                     ) : (
-                        <div className='message'>
+                        <div className='message' key={item.id + `_${index}`}>
                             <div className='message__bubble another-user'>
                                 <span>
                                     {item.message}

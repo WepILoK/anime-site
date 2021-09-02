@@ -220,8 +220,10 @@
             height: 34px;
 
             &_username {
-              font-weight: 500;
-              font-size: 13px;
+              font-weight: 600;
+              font-size: 14px;
+              height: 19px;
+              width: 70px;
               max-width: 100%;
               color: $mainColor2;
             }

@@ -11,6 +11,7 @@ import {Authorization} from "./pages/Authorization/Authorization";
 import {useDispatch, useSelector} from "react-redux";
 import {selectIsAuth} from "./store/ducks/user/selectors";
 import {fetchUserData} from "./store/ducks/user/actionCreators";
+import {AnotherUser} from "./pages/AnotherUser/AnotherUser";
 
 
 export const App = () => {
@@ -31,6 +32,7 @@ export const App = () => {
                     <Route path={HomeRoutes.USER}>
                         {isAuth ? <User/> : <Redirect to={HomeRoutes.ROOT} />}
                     </Route>
+                    <Route path={HomeRoutes.ANOTHER_USER + ':id'} component={AnotherUser}/>
                     <Route path='*'>
                         <div>404</div>
                     </Route>
@@ -39,4 +41,3 @@ export const App = () => {
         </div>
     );
 }
-

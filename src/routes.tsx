@@ -10,7 +10,8 @@ export const HomeRoutes = {
     ROOT: '/',
     FORUM: '/forum',
     CATALOG: '/catalog',
-    USER: '/user'
+    USER: '/user',
+    ANOTHER_USER: '/profile/'
 }
 
 export const UserRoutes = {

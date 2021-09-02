@@ -1,10 +1,11 @@
-import React, {useCallback} from 'react';
-import {Link, Route, useHistory} from 'react-router-dom';
+import React from 'react';
+import {Route} from 'react-router-dom';
 import './User.scss'
 import {UserRoutes} from "../../routes";
 import {Navbar} from "./components/Navbar/Navbar";
 import {Profile} from "../../components/Profile/Profile";
 import {Chat} from "./components/Chat/Chat";
+
 
 export const User = () => {
 

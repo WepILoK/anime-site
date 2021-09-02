@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import {HomeRoutes} from "../../../routes";
 
 interface MiniChatProps {
 
@@ -21,9 +23,11 @@ export const MiniChat: React.FC<MiniChatProps> = () => {
                                     <div/>
                                 </div>
                                 <div className='mini-chat-item__info'>
-                                    <div className='mini-chat-item__info_username text-cut'>
-                                        UserName
-                                    </div>
+                                    <Link to={HomeRoutes.ANOTHER_USER + `${1}`}>
+                                        <div className='mini-chat-item__info_username text-cut'>
+                                            <div>UserName</div>
+                                        </div>
+                                    </Link>
                                     <div className='mini-chat-item__info_date'>
                                         около 2 часов назад
                                     </div>
