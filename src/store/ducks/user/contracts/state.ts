@@ -55,4 +55,5 @@ export interface IUserState {
     user: IUserData[]
     isAuth: boolean
     status: Status
+    message: string | null
 }

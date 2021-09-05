@@ -1,21 +1,41 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {FormField} from "../../../components/FormField/FormField";
 import {FormProvider, useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {loginFormSchema} from "../../../utils/validations";
-import {useDispatch} from "react-redux";
 import {fetchSignIn} from "../../../store/ducks/user/actionCreators";
+import {useDispatch, useSelector} from "react-redux";
+import {Status} from "../../../store/ducks/user/contracts/state";
+import {selectUserMessage, selectUserStatus} from "../../../store/ducks/user/selectors";
+import {useHistory} from "react-router-dom";
+import {HomeRoutes} from "../../../routes";
+
+
+export interface LoginFormProps {
+    email: string
+    password: string
+}
 
 export const LoginPage = () => {
     const dispatch = useDispatch()
-    const form = useForm({
+    const status = useSelector(selectUserStatus)
+    const history = useHistory()
+    const message = useSelector(selectUserMessage)
+    const form = useForm<LoginFormProps>({
         mode: 'onSubmit',
         resolver: yupResolver(loginFormSchema)
     })
 
-    const onSubmit = (data: any) => {
+    const onSubmit = (data: LoginFormProps) => {
         dispatch(fetchSignIn(data))
     };
+
+    useEffect(() => {
+        // if (status === Status.SUCCESS) {
+        //     history.push(HomeRoutes.ROOT)
+        // }
+    }, [status])
+
 
     return (
         <FormProvider {...form}>
@@ -32,6 +52,16 @@ export const LoginPage = () => {
                             type='submit'>
                         Войти
                     </button>
+                </div>
+                <div className='authorization__message'>
+                    {status === Status.ERROR &&
+                    <div className='authorization__message_error'>
+                        {message}
+                    </div>}
+                    {status === Status.SUCCESS &&
+                    <div className='authorization__message_success'>
+                        {message}
+                    </div>}
                 </div>
             </form>
         </FormProvider>

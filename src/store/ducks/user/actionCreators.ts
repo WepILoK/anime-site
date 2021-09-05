@@ -2,12 +2,13 @@ import {
     IFetchSignIn, IFetchSignUp,
     IFetchUserData,
     ISetIsAuth,
-    ISetUserData,
+    ISetUserData, ISetUserMessage,
     ISetUserStatus,
     UserActionsType
 } from "./contracts/actionTypes";
 import {IUserState} from "./contracts/state";
 import {RegisterFormProps} from "../../../pages/Authorization/components/Register";
+import {LoginFormProps} from "../../../pages/Authorization/components/Login";
 
 
 export const setIsAuth = (payload: boolean): ISetIsAuth => ({
@@ -15,7 +16,7 @@ export const setIsAuth = (payload: boolean): ISetIsAuth => ({
     payload
 });
 
-export const fetchSignIn = (payload: any): IFetchSignIn => ({
+export const fetchSignIn = (payload: LoginFormProps): IFetchSignIn => ({
     type: UserActionsType.FETCH_SIGN_IN,
     payload
 });
@@ -36,6 +37,11 @@ export const setUserData = (payload: IUserState['user']): ISetUserData => ({
 
 export const setUserStatus = (payload: IUserState['status']): ISetUserStatus => ({
     type: UserActionsType.SET_USER_STATUS,
+    payload
+})
+
+export const setUserMessage = (payload: string): ISetUserMessage => ({
+    type: UserActionsType.SET_USER_MESSAGE,
     payload
 })
 

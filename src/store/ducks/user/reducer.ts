@@ -6,7 +6,8 @@ import {IUserActions, UserActionsType} from "./contracts/actionTypes";
 const initialState: IUserState = {
     isAuth: false,
     user: [],
-    status: Status.NEVER
+    status: Status.NEVER,
+    message: null
 }
 
 export const userReducer = produce((draft: Draft<IUserState>, action: IUserActions) => {
@@ -19,6 +20,9 @@ export const userReducer = produce((draft: Draft<IUserState>, action: IUserActio
             break;
         case UserActionsType.SET_USER_DATA:
             draft.user = action.payload
+            break;
+        case UserActionsType.SET_USER_MESSAGE:
+            draft.message = action.payload
             break;
         default:
             break;

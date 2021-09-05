@@ -1,9 +1,8 @@
 import {call, put, takeLatest} from "redux-saga/effects";
-import {setIsAuth, setUserData, setUserStatus} from "./actionCreators";
-import {UserApi} from "../../../api/user-api";
+import {setIsAuth, setUserData, setUserMessage, setUserStatus} from "./actionCreators";
+import {UserApi, UserApiResponse} from "../../../api/user-api";
 import {IUserState, Status} from "./contracts/state";
 import {IFetchSignIn, IFetchSignUp, UserActionsType} from "./contracts/actionTypes";
-import {RegisterFormProps} from "../../../pages/Authorization/components/Register";
 
 
 export function* fetchSignInRequest({payload}: IFetchSignIn) {
@@ -27,8 +26,10 @@ export function* fetchSignUpRequest({payload}: IFetchSignUp) {
     try {
         yield put(setUserStatus(Status.LOADING))
         yield call(UserApi.signUp, payload)
+        yield put(setUserMessage('Регистрация прошла успешно!'))
         yield put(setUserStatus(Status.SUCCESS))
     } catch (error) {
+        yield put(setUserMessage('Возможно ваша почта или логин уже используются.'))
         yield put(setUserStatus(Status.ERROR))
     }
 }
@@ -41,10 +42,10 @@ export function* fetchUserDataRequest() {
             yield put(setUserStatus(Status.SUCCESS))
             yield put(setIsAuth(true))
         } else {
-            yield put(setUserStatus(Status.ERROR))
+            yield put(setUserStatus(Status.LOADING))
         }
     } catch (error) {
-        yield put(setUserStatus(Status.ERROR))
+        yield put(setUserStatus(Status.LOADING))
     }
 
 }

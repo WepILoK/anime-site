@@ -1,6 +1,7 @@
 import {Action} from "redux";
 import {IUserState} from "./state";
 import {RegisterFormProps} from "../../../../pages/Authorization/components/Register";
+import {LoginFormProps} from "../../../../pages/Authorization/components/Login";
 
 
 export enum UserActionsType {
@@ -10,6 +11,7 @@ export enum UserActionsType {
     FETCH_SIGN_IN = 'user/FETCH_SIGN_IN',
     FETCH_SIGN_UP = 'user/FETCH_SIGN_UP',
     SET_USER_STATUS = 'user/SET_USER_STATUS',
+    SET_USER_MESSAGE = 'user/SET_USER_MESSAGE',
 }
 
 export interface ISetIsAuth extends Action<UserActionsType> {
@@ -23,7 +25,7 @@ export interface IFetchUserData extends Action<UserActionsType> {
 
 export interface IFetchSignIn extends Action<UserActionsType> {
     type: UserActionsType.FETCH_SIGN_IN
-    payload: any
+    payload: LoginFormProps
 }
 
 export interface IFetchSignUp extends Action<UserActionsType> {
@@ -41,6 +43,11 @@ export interface ISetUserStatus extends Action<UserActionsType> {
     payload: IUserState['status']
 }
 
+export interface ISetUserMessage extends Action<UserActionsType> {
+    type: UserActionsType.SET_USER_MESSAGE
+    payload: string
+}
+
 
 export type IUserActions =
     ISetIsAuth
@@ -49,4 +56,6 @@ export type IUserActions =
     | ISetUserStatus
     | IFetchUserData
     | IFetchSignUp
+    | ISetUserMessage
+
 
