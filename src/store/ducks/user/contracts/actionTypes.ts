@@ -1,5 +1,6 @@
 import {Action} from "redux";
 import {IUserState} from "./state";
+import {RegisterFormProps} from "../../../../pages/Authorization/components/Register";
 
 
 export enum UserActionsType {
@@ -25,6 +26,11 @@ export interface IFetchSignIn extends Action<UserActionsType> {
     payload: any
 }
 
+export interface IFetchSignUp extends Action<UserActionsType> {
+    type: UserActionsType.FETCH_SIGN_UP
+    payload: RegisterFormProps
+}
+
 export interface ISetUserData extends Action<UserActionsType> {
     type: UserActionsType.SET_USER_DATA
     payload: IUserState['user']
@@ -42,4 +48,5 @@ export type IUserActions =
     | ISetUserData
     | ISetUserStatus
     | IFetchUserData
+    | IFetchSignUp
 

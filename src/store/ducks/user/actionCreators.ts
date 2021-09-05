@@ -1,5 +1,5 @@
 import {
-    IFetchSignIn,
+    IFetchSignIn, IFetchSignUp,
     IFetchUserData,
     ISetIsAuth,
     ISetUserData,
@@ -7,6 +7,7 @@ import {
     UserActionsType
 } from "./contracts/actionTypes";
 import {IUserState} from "./contracts/state";
+import {RegisterFormProps} from "../../../pages/Authorization/components/Register";
 
 
 export const setIsAuth = (payload: boolean): ISetIsAuth => ({
@@ -16,6 +17,11 @@ export const setIsAuth = (payload: boolean): ISetIsAuth => ({
 
 export const fetchSignIn = (payload: any): IFetchSignIn => ({
     type: UserActionsType.FETCH_SIGN_IN,
+    payload
+});
+
+export const fetchSignUp = (payload: RegisterFormProps): IFetchSignUp => ({
+    type: UserActionsType.FETCH_SIGN_UP,
     payload
 });
 

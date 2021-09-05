@@ -2,10 +2,11 @@ import {call, put, takeLatest} from "redux-saga/effects";
 import {setIsAuth, setUserData, setUserStatus} from "./actionCreators";
 import {UserApi} from "../../../api/user-api";
 import {IUserState, Status} from "./contracts/state";
-import {UserActionsType} from "./contracts/actionTypes";
+import {IFetchSignIn, IFetchSignUp, UserActionsType} from "./contracts/actionTypes";
+import {RegisterFormProps} from "../../../pages/Authorization/components/Register";
 
 
-export function* fetchSignInRequest({payload}: any) {
+export function* fetchSignInRequest({payload}: IFetchSignIn) {
     try {
         const user: IUserState['user'] = yield call(UserApi.signIn, payload)
         if (user.length === 1) {
@@ -19,6 +20,16 @@ export function* fetchSignInRequest({payload}: any) {
     } catch (error) {
         yield put(setUserStatus(Status.ERROR))
         alert('Ощибка загрузки данных с сервера\n' + error.message)
+    }
+}
+
+export function* fetchSignUpRequest({payload}: IFetchSignUp) {
+    try {
+        yield put(setUserStatus(Status.LOADING))
+        yield call(UserApi.signUp, payload)
+        yield put(setUserStatus(Status.SUCCESS))
+    } catch (error) {
+        yield put(setUserStatus(Status.ERROR))
     }
 }
 
@@ -40,5 +51,6 @@ export function* fetchUserDataRequest() {
 
 export function* UserSaga() {
     yield takeLatest(UserActionsType.FETCH_SIGN_IN, fetchSignInRequest)
+    yield takeLatest(UserActionsType.FETCH_SIGN_UP, fetchSignUpRequest)
     yield takeLatest(UserActionsType.FETCH_USER_DATA, fetchUserDataRequest)
 }
