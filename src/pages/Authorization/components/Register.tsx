@@ -7,8 +7,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchSignUp, setUserMessage, setUserStatus} from "../../../store/ducks/user/actionCreators";
 import {selectUserMessage, selectUserStatus} from "../../../store/ducks/user/selectors";
 import {Status} from "../../../store/ducks/user/contracts/state";
-import {AuthRoutes} from "../../../routes";
-import {useHistory} from "react-router-dom";
 
 
 export interface RegisterFormProps {
@@ -21,7 +19,6 @@ export interface RegisterFormProps {
 export const RegisterPage = () => {
     const dispatch = useDispatch()
     const status = useSelector(selectUserStatus)
-    const history = useHistory()
     const message = useSelector(selectUserMessage)
     const form = useForm<RegisterFormProps>({
         mode: 'onSubmit',
@@ -31,12 +28,6 @@ export const RegisterPage = () => {
     const onSubmit = (data: RegisterFormProps) => {
         dispatch(fetchSignUp(data))
     };
-
-    useEffect(() => {
-        if (status === Status.SUCCESS && message) {
-            history.push(AuthRoutes.LOGIN)
-        }
-    }, [status])
 
     useEffect(() => {
         return () => {
@@ -68,7 +59,7 @@ export const RegisterPage = () => {
                     <div className='authorization__message_error'>
                         {message}
                     </div>}
-                    {status === Status.SUCCESS && message &&
+                    {status === Status.SIGNUP_SUCCESS && message &&
                     <div className='authorization__message_success'>
                         {message}
                     </div>}

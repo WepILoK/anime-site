@@ -49,6 +49,8 @@ export enum Status {
     LOADING = 'LOADING',
     ERROR = 'ERROR',
     NEVER = 'NEVER',
+    SIGNUP_SUCCESS = 'SIGNUP_SUCCESS',
+    SIGNIN_SUCCESS = 'SIGNIN_SUCCESS'
 }
 
 export interface IUserState {

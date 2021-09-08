@@ -31,7 +31,7 @@ export const LoginPage = () => {
     };
 
     useEffect(() => {
-        if (status === Status.SUCCESS) {
+        if (status === Status.SIGNIN_SUCCESS) {
             history.push(HomeRoutes.ROOT)
         }
     }, [status])
@@ -64,7 +64,7 @@ export const LoginPage = () => {
                     <div className='authorization__message_error'>
                         {message}
                     </div>}
-                    {status === Status.SUCCESS && message &&
+                    {status === Status.SIGNIN_SUCCESS && message &&
                     <div className='authorization__message_success'>
                         {message}
                     </div>}

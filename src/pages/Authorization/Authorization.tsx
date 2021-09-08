@@ -18,14 +18,16 @@ export const Authorization = () => {
         }
     }, [isAuth])
 
-    return (
-        <div className='container'>
-            <div className='authorization'>
-                <div className='section'>
-                    <Route path={AuthRoutes.LOGIN} component={LoginPage} exact/>
-                    <Route path={AuthRoutes.REGISTRATION} component={RegisterPage} exact/>
+    if (!isAuth) {
+        return (
+            <div className='container'>
+                <div className='authorization'>
+                    <div className='section'>
+                        <Route path={AuthRoutes.LOGIN} component={LoginPage}/>
+                        <Route path={AuthRoutes.REGISTRATION} component={RegisterPage}/>
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    } else return null
 };

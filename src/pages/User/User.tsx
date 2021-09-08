@@ -19,10 +19,11 @@ export const User = () => {
         }
     }, [isAuth])
 
-    return (
+    if (isAuth) {
+        return (
             <div className='container'>
                 <div className='container__left-side'>
-                    <Route path={UserRoutes.NOTIFICATIONS} exact>
+                    <Route path={UserRoutes.NOTIFICATIONS}>
                         <div className='section'>
                             <div className='section__body'>
                                 <div className='updates'>
@@ -60,6 +61,7 @@ export const User = () => {
                     <Navbar/>
                 </div>
             </div>
-    );
+        );
+    } else return null
 };
 
