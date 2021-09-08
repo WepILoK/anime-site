@@ -14,8 +14,8 @@ export function* fetchSignInRequest({payload}: IFetchSignIn) {
         yield put(setUserStatus(Status.SIGNIN_SUCCESS))
         yield put(setIsAuth(true))
     } catch (error) {
+        yield put(setUserMessage('Неверный логин или пароль.'))
         yield put(setUserStatus(Status.ERROR))
-        alert('Ощибка загрузки данных с сервера\n' + error.message)
     }
 }
 
