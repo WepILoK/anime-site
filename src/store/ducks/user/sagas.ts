@@ -7,15 +7,12 @@ import {IFetchSignIn, IFetchSignUp, UserActionsType} from "./contracts/actionTyp
 
 export function* fetchSignInRequest({payload}: IFetchSignIn) {
     try {
-        const user: IUserState['user'] = yield call(UserApi.signIn, payload)
-        if (user.length === 1) {
-            yield put(setUserData(user))
-            window.localStorage.setItem('token', user[0].token)
-            yield put(setUserStatus(Status.SUCCESS))
-            yield put(setIsAuth(true))
-        } else {
-            yield put(setUserStatus(Status.ERROR))
-        }
+        const {data} = yield call(UserApi.signIn, payload)
+        yield put(setUserData(data.data))
+        window.localStorage.setItem('token', data.data.token)
+        yield put(setUserMessage(data.message))
+        yield put(setUserStatus(Status.SUCCESS))
+        yield put(setIsAuth(true))
     } catch (error) {
         yield put(setUserStatus(Status.ERROR))
         alert('Ощибка загрузки данных с сервера\n' + error.message)
@@ -25,8 +22,8 @@ export function* fetchSignInRequest({payload}: IFetchSignIn) {
 export function* fetchSignUpRequest({payload}: IFetchSignUp) {
     try {
         yield put(setUserStatus(Status.LOADING))
-        yield call(UserApi.signUp, payload)
-        yield put(setUserMessage('Регистрация прошла успешно!'))
+        const message: string = yield call(UserApi.signUp, payload)
+        yield put(setUserMessage(message))
         yield put(setUserStatus(Status.SUCCESS))
     } catch (error) {
         yield put(setUserMessage('Возможно ваша почта или логин уже используются.'))
@@ -36,14 +33,11 @@ export function* fetchSignUpRequest({payload}: IFetchSignUp) {
 
 export function* fetchUserDataRequest() {
     try {
-        const user: IUserState['user'] = yield call(UserApi.getMe)
-        if (user.length === 1) {
-            yield put(setUserData(user))
-            yield put(setUserStatus(Status.SUCCESS))
-            yield put(setIsAuth(true))
-        } else {
-            yield put(setUserStatus(Status.LOADING))
-        }
+        const {data} = yield call(UserApi.getMe)
+        yield put(setUserData(data.data))
+        yield put(setUserMessage(data.message))
+        yield put(setUserStatus(Status.SUCCESS))
+        yield put(setIsAuth(true))
     } catch (error) {
         yield put(setUserStatus(Status.LOADING))
     }

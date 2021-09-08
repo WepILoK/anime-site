@@ -4,7 +4,7 @@ import {FormProvider, useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {registerFormSchema} from "../../../utils/validations";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchSignUp} from "../../../store/ducks/user/actionCreators";
+import {fetchSignUp, setUserMessage, setUserStatus} from "../../../store/ducks/user/actionCreators";
 import {selectUserMessage, selectUserStatus} from "../../../store/ducks/user/selectors";
 import {Status} from "../../../store/ducks/user/contracts/state";
 import {AuthRoutes} from "../../../routes";
@@ -33,11 +33,17 @@ export const RegisterPage = () => {
     };
 
     useEffect(() => {
-        if (status === Status.SUCCESS) {
+        if (status === Status.SUCCESS && message) {
             history.push(AuthRoutes.LOGIN)
         }
     }, [status])
 
+    useEffect(() => {
+        return () => {
+            dispatch(setUserStatus(Status.NEVER))
+            dispatch(setUserMessage(null))
+        }
+    }, [])
 
     return (
         <FormProvider {...form}>
@@ -58,11 +64,11 @@ export const RegisterPage = () => {
                     </button>
                 </div>
                 <div className='authorization__message'>
-                    {status === Status.ERROR &&
+                    {status === Status.ERROR && message &&
                     <div className='authorization__message_error'>
                         {message}
                     </div>}
-                    {status === Status.SUCCESS &&
+                    {status === Status.SUCCESS && message &&
                     <div className='authorization__message_success'>
                         {message}
                     </div>}

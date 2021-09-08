@@ -1,12 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Authorization.scss'
-import {Route} from "react-router-dom";
+import {Route, useHistory} from "react-router-dom";
 import {LoginPage} from "./components/Login";
 import {RegisterPage} from "./components/Register";
-import {AuthRoutes} from "../../routes";
+import {AuthRoutes, HomeRoutes} from "../../routes";
+import {useSelector} from "react-redux";
+import {selectIsAuth} from "../../store/ducks/user/selectors";
 
 
 export const Authorization = () => {
+    const isAuth = useSelector(selectIsAuth)
+    const history = useHistory()
+
+    useEffect(() => {
+        if(isAuth) {
+            history.push(HomeRoutes.ROOT)
+        }
+    }, [isAuth])
 
     return (
         <div className='container'>

@@ -4,8 +4,8 @@ import {IUserData, IUserState, Status} from "./contracts/state";
 
 export const selectUserState = (state: RootState): IUserState => state.user
 
-export const selectUserData = (state: RootState): IUserData =>
-    selectUserState(state).user[0]
+export const selectUserData = (state: RootState):IUserState['user'] =>
+    selectUserState(state).user
 
 export const selectUserStatus = (state: RootState): IUserState['status'] =>
     selectUserState(state).status

@@ -1,13 +1,23 @@
-import React from 'react';
-import {Route} from 'react-router-dom';
+import React, {useEffect} from 'react';
+import {Route, useHistory} from 'react-router-dom';
 import './User.scss'
-import {UserRoutes} from "../../routes";
+import {HomeRoutes, UserRoutes} from "../../routes";
 import {Navbar} from "./components/Navbar/Navbar";
 import {Profile} from "../../components/Profile/Profile";
 import {Chat} from "./components/Chat/Chat";
+import {useSelector} from "react-redux";
+import {selectIsAuth} from "../../store/ducks/user/selectors";
 
 
 export const User = () => {
+    const isAuth = useSelector(selectIsAuth)
+    const history = useHistory()
+
+    useEffect(() => {
+        if(!isAuth) {
+            history.push(HomeRoutes.ROOT)
+        }
+    }, [isAuth])
 
     return (
             <div className='container'>

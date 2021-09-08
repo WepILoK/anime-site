@@ -45,7 +45,7 @@ export interface ISetUserStatus extends Action<UserActionsType> {
 
 export interface ISetUserMessage extends Action<UserActionsType> {
     type: UserActionsType.SET_USER_MESSAGE
-    payload: string
+    payload: IUserState['message']
 }
 
 

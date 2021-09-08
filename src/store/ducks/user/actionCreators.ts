@@ -40,7 +40,7 @@ export const setUserStatus = (payload: IUserState['status']): ISetUserStatus => 
     payload
 })
 
-export const setUserMessage = (payload: string): ISetUserMessage => ({
+export const setUserMessage = (payload: IUserState['message']): ISetUserMessage => ({
     type: UserActionsType.SET_USER_MESSAGE,
     payload
 })

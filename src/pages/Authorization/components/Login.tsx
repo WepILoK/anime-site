@@ -3,7 +3,7 @@ import {FormField} from "../../../components/FormField/FormField";
 import {FormProvider, useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {loginFormSchema} from "../../../utils/validations";
-import {fetchSignIn} from "../../../store/ducks/user/actionCreators";
+import {fetchSignIn, setUserMessage, setUserStatus} from "../../../store/ducks/user/actionCreators";
 import {useDispatch, useSelector} from "react-redux";
 import {Status} from "../../../store/ducks/user/contracts/state";
 import {selectUserMessage, selectUserStatus} from "../../../store/ducks/user/selectors";
@@ -31,11 +31,17 @@ export const LoginPage = () => {
     };
 
     useEffect(() => {
-        // if (status === Status.SUCCESS) {
-        //     history.push(HomeRoutes.ROOT)
-        // }
+        if (status === Status.SUCCESS) {
+            history.push(HomeRoutes.ROOT)
+        }
     }, [status])
 
+    useEffect(() => {
+        return () => {
+            dispatch(setUserStatus(Status.NEVER))
+            dispatch(setUserMessage(null))
+        }
+    }, [])
 
     return (
         <FormProvider {...form}>
@@ -54,11 +60,11 @@ export const LoginPage = () => {
                     </button>
                 </div>
                 <div className='authorization__message'>
-                    {status === Status.ERROR &&
+                    {status === Status.ERROR && message &&
                     <div className='authorization__message_error'>
                         {message}
                     </div>}
-                    {status === Status.SUCCESS &&
+                    {status === Status.SUCCESS && message &&
                     <div className='authorization__message_success'>
                         {message}
                     </div>}

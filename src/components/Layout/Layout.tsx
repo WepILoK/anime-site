@@ -2,16 +2,27 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Layout.scss'
 import {AuthRoutes, HomeRoutes, UserRoutes} from "../../routes";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {selectIsAuth, selectUserData} from "../../store/ducks/user/selectors";
+import {put} from "redux-saga/effects";
+import {setIsAuth, setUserData, setUserStatus} from "../../store/ducks/user/actionCreators";
+import {Status} from "../../store/ducks/user/contracts/state";
 
 export const Layout: React.FC = ({children}) => {
+    const dispatch = useDispatch()
     const isAuth = useSelector(selectIsAuth)
     const userData = useSelector(selectUserData)
     const [visibleNotifications, setVisibleNotifications] = useState(false)
 
     const toggleVisibleNotifications = () => {
         setVisibleNotifications(prev => !prev)
+    }
+
+    const logOut = () => {
+        window.localStorage.removeItem('token')
+        dispatch(setIsAuth(false))
+        dispatch(setUserStatus(Status.NEVER))
+        dispatch(setUserData(null))
     }
 
     return (
@@ -35,7 +46,7 @@ export const Layout: React.FC = ({children}) => {
                                         onClick={toggleVisibleNotifications}>
                                     <img src={require("../../assets/images/notifications.svg").default}
                                          alt='notifications'/>
-                                    {userData.notifications.length > 0 && (<p className='text-cut'>{userData.notifications.length}</p>)}
+                                    {userData && userData.notifications.length > 0 && (<p className='text-cut'>{userData.notifications.length}</p>)}
                                 </button>
                                 <Link to={UserRoutes.MESSAGES}>
                                     <button className='user__image button'>
@@ -52,9 +63,9 @@ export const Layout: React.FC = ({children}) => {
                                                 </div>
                                             </div>
                                             <div className='notifications__content'>
-                                                {userData.notifications.length
+                                                {userData && userData.notifications.length
                                                     ? (<div className='notifications__list'>
-                                                        {userData.notifications.map(item =>
+                                                        {userData && userData.notifications.map(item =>
                                                             <div className='notification-row' key={item.id}>
                                                                 <div className='notification-item'>
                                                                     <img className='notification-item__image'
@@ -102,7 +113,7 @@ export const Layout: React.FC = ({children}) => {
                                     </Link>
                                 </div>
                                 <div className='user__logout'>
-                                    <button className='button'>
+                                    <button className='button' onClick={logOut}>
                                         Выйти
                                     </button>
                                 </div>

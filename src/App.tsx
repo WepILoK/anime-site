@@ -21,17 +21,14 @@ export const App = () => {
     useEffect( () => {
         dispatch(fetchUserData())
     }, [])
+
     return (
         <div className="App">
             <Layout>
                 <Switch>
                     <Route path={HomeRoutes.ROOT} component={Home} exact/>
-                    <Route path={AuthRoutes.AUTH}>
-                        {isAuth ? <Redirect to={HomeRoutes.ROOT}/> : <Authorization/>}
-                    </Route>
-                    <Route path={HomeRoutes.USER}>
-                        {isAuth ? <User/> : <Redirect to={HomeRoutes.ROOT} />}
-                    </Route>
+                    <Route path={AuthRoutes.AUTH} component={Authorization}/>
+                    <Route path={HomeRoutes.USER} component={User}/>
                     <Route path={HomeRoutes.ANOTHER_USER + ':id'} component={AnotherUser}/>
                     <Route path='*'>
                         <div>404</div>

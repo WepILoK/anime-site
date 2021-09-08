@@ -29,19 +29,19 @@ export interface IUserData {
     userName: string
     password: string
     createdAt: string
+    notifications: INotification[]
     token: string
+    chats: IChat[]
+    friends: IFriend[]
+    avatar?: string
     name?: string
     surname?: string
     age?: number
     country?: string
     city?: string
-    avatar?: string
     vk?: string
     facebook?: string
     twitter?: string
-    notifications: INotification[]
-    chats: IChat[]
-    friends: IFriend[]
 }
 
 export enum Status {
@@ -52,7 +52,7 @@ export enum Status {
 }
 
 export interface IUserState {
-    user: IUserData[]
+    user: IUserData | null
     isAuth: boolean
     status: Status
     message: string | null
