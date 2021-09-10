@@ -13,16 +13,14 @@ const baseURL = "https://backend-anime-site.herokuapp.com"
 
 export const UserApi = {
     async signIn(postData: LoginFormProps) {
-        const data = await axios.post<UserApiResponse<IUserState['user']>>(baseURL + '/login', postData)
-        return data
+        return await axios.post<UserApiResponse<IUserState['user']>>(baseURL + '/login', postData)
     },
     async signUp(postData: RegisterFormProps) {
         const {data} = await axios.post<UserApiResponse<any>>(baseURL + '/registration', postData)
         return data.message
     },
     async getMe() {
-        const data = await axios.get(baseURL + '/users/me')
-        return data
+        return await axios.get<UserApiResponse<IUserState['user']>>(baseURL + '/users/me')
     },
 
 }

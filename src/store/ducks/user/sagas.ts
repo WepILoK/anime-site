@@ -39,7 +39,7 @@ export function* fetchUserDataRequest() {
         yield put(setUserStatus(Status.SUCCESS))
         yield put(setIsAuth(true))
     } catch (error) {
-        yield put(setUserStatus(Status.LOADING))
+        yield put(setUserStatus(Status.NEVER))
     }
 
 }

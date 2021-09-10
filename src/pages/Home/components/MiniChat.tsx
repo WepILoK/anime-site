@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {HomeRoutes} from "../../../routes";
 
 interface MiniChatProps {
@@ -43,9 +43,9 @@ export const MiniChat: React.FC<MiniChatProps> = () => {
                     )}
                 </div>
                 <div className='mini-chat-send'>
-                                <textarea className='mini-chat-send__area'
-                                          maxLength={250}
-                                          placeholder='Введите сообщение'/>
+                    <textarea className='mini-chat-send__area'
+                              maxLength={250}
+                              placeholder='Введите сообщение'/>
                     <button className='mini-chat-send__button button'>
                         Send
                     </button>

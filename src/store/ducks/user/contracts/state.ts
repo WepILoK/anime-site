@@ -8,11 +8,11 @@ export interface INotification {
 }
 
 export interface IChat {
-    id: number
+    id: string
     userName: string
     avatar: string
     messages: {
-        id: number
+        id: string
         message: string
     }[]
 }
@@ -24,10 +24,9 @@ export interface IFriend {
 }
 
 export interface IUserData {
-    id: number
+    _id: string
     email: string
     userName: string
-    password: string
     createdAt: string
     notifications: INotification[]
     token: string

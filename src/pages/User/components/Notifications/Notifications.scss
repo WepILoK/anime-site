@@ -1,0 +1,60 @@
+.notifications {
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+
+    &:last-child {
+      border: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__avatar {
+    width: 100px;
+    border-radius: 3px;
+  }
+
+  &__content {
+    flex-grow: 1;
+    padding-left: 16px;
+
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 8px 5px 2px;
+    margin-bottom: 4px;
+    background-color: #F8F8F9;
+    border-bottom: 1px solid $mainColor2;
+
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__date {
+  }
+
+  &__body {
+
+  }
+
+  &__series {
+    height: 72px;
+
+    &_number {
+      padding: 5px 5px;
+    }
+  }
+}

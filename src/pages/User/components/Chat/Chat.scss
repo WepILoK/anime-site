@@ -4,7 +4,6 @@
   height: 600px;
   display: flex;
   &__users {
-    padding: 10px;
     min-width: calc(100% - 590px);
     max-width: calc(100% - 590px);
     border-right: 2px solid $borderGrey;
@@ -17,9 +16,7 @@
         cursor: pointer;
         padding: 10px 10px;
         border-bottom: 2px solid $borderGrey;
-        &:last-child {
-          border-bottom: none;
-        }
+
         &__header {
           display: flex;
           align-items: center;
@@ -55,6 +52,7 @@
           padding: 2px 6px;
         }
       }
+
     }
   }
   &__messages {
