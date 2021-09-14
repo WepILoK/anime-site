@@ -44,16 +44,16 @@ export const Profile: React.FC<IUserData> =
                             <div className='profile__top-left'>
                                 <div className='profile__social-networks'>
                                     {vk?.length ? (<div className='social-network'>
-                                        <div className='social-network__image'>
-                                            <img src={require("../../assets/images/VK.svg").default}
-                                                 alt='VK-icon'/>
+                                            <div className='social-network__image'>
+                                                <img src={require("../../assets/images/VK.svg").default}
+                                                     alt='VK-icon'/>
+                                            </div>
+                                            <div className='social-network__url'>
+                                                <a href={vk} target='_blank'>
+                                                    Пользователь в VK
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div className='social-network__url'>
-                                            <a href={vk} target='_blank'>
-                                                Пользователь в VK
-                                            </a>
-                                        </div>
-                                    </div>
                                     ) : null}
                                     {twitter?.length ? (
                                         <div className='social-network'>

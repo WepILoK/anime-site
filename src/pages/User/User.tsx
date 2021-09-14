@@ -8,6 +8,7 @@ import {Chat} from "./components/Chat/Chat";
 import {useSelector} from "react-redux";
 import {selectIsAuth, selectUserData} from "../../store/ducks/user/selectors";
 import {Notifications} from "./components/Notifications/Notifications";
+import {Settings} from "./components/Settings/Settings";
 
 
 export const User = () => {
@@ -27,6 +28,7 @@ export const User = () => {
                 <div className='container__left-side'>
                     <Route path={UserRoutes.PROFILE} render={() => userData && <Profile {...userData}/>}/>
                     <Route path={UserRoutes.NOTIFICATIONS} component={Notifications}/>
+                    <Route path={UserRoutes.SETTINGS} component={Settings}/>
                     <Route path={UserRoutes.MESSAGES} component={Chat}/>
                 </div>
                 <div className='container__right-side'>
