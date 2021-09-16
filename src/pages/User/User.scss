@@ -33,11 +33,9 @@
         }
 
         &:last-child {
-          border-radius: 0 4px;
+          border-radius: 0 0 5px 4px;
           border-bottom: none;
         }
-
-
       }
 
       .active {

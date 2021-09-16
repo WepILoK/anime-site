@@ -3,9 +3,12 @@ import './Profile.scss'
 import {IUserData} from "../../store/ducks/user/contracts/state";
 import {useSelector} from "react-redux";
 import {selectUserData} from "../../store/ducks/user/selectors";
+import {IAnotherUserData} from "../../store/ducks/anotherUser/contracts/state";
+import { Link } from 'react-router-dom';
+import {UserRoutes} from "../../routes";
 
 
-export const Profile: React.FC<IUserData> =
+export const Profile: React.FC<IUserData | IAnotherUserData> =
     ({
          userName, _id, twitter, vk,
          facebook, name, surname,
@@ -34,7 +37,11 @@ export const Profile: React.FC<IUserData> =
                         </div>
                         {userData?._id !== _id && (
                             <div className='profile__header-right'>
-                                <button className='profile__button button'>Отправить сообщение</button>
+                                <Link to={UserRoutes.MESSAGES + '/' + _id}>
+                                    <button className='profile__button button'>
+                                        Отправить сообщение
+                                    </button>
+                                </Link>
                                 <div className='profile__button button'>Добавить в друзья</div>
                             </div>
                         )}
