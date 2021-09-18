@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Layout.scss'
-import {AuthRoutes, HomeRoutes, UserRoutes} from "../../routes";
+import {AuthRoutes, UserRoutes} from "../../routes";
 import {useDispatch, useSelector} from "react-redux";
 import {selectIsAuth, selectUserData} from "../../store/ducks/user/selectors";
-import {put} from "redux-saga/effects";
 import {setIsAuth, setUserData, setUserStatus} from "../../store/ducks/user/actionCreators";
 import {Status} from "../../store/ducks/user/contracts/state";
 
@@ -13,6 +12,48 @@ export const Layout: React.FC = ({children}) => {
     const isAuth = useSelector(selectIsAuth)
     const userData = useSelector(selectUserData)
     const [visibleNotifications, setVisibleNotifications] = useState(false)
+    const notifications = [
+        {
+            id: 4,
+            avatar: "animeAvatar4.png",
+            name: "Название аниме 4",
+            series: 4,
+            translationTeam: "Translation-Team",
+            addedAt: "14:40, 21.08.21"
+        },
+        {
+            id: 11,
+            avatar: "animeAvatar11.png",
+            name: "Название аниме 11",
+            series: 11,
+            translationTeam: "Translation-Team",
+            addedAt: "14:40, 21.08.21"
+        },
+        {
+            id: 4,
+            avatar: "animeAvatar4.png",
+            name: "Название аниме 4",
+            series: 1,
+            translationTeam: "Translation-Team",
+            addedAt: "14:40, 21.08.21"
+        },
+        {
+            id: 19,
+            avatar: "animeAvatar19.png",
+            name: "Название аниме 19",
+            series: 6,
+            translationTeam: "Translation-Team",
+            addedAt: "14:40, 21.08.21"
+        },
+        {
+            id: 13,
+            avatar: "animeAvatar13.png",
+            name: "Название аниме 13",
+            series: 5,
+            translationTeam: "Translation-Team",
+            addedAt: "14:40, 21.08.21"
+        }
+    ]
 
     const toggleVisibleNotifications = () => {
         setVisibleNotifications(prev => !prev)
@@ -46,7 +87,7 @@ export const Layout: React.FC = ({children}) => {
                                         onClick={toggleVisibleNotifications}>
                                     <img src={require("../../assets/images/notifications.svg").default}
                                          alt='notifications'/>
-                                    {userData && userData.notifications.length > 0 && (<p className='text-cut'>{userData.notifications.length}</p>)}
+                                    {notifications.length > 0 && (<p className='text-cut'>{notifications.length}</p>)}
                                 </button>
                                 <Link to={UserRoutes.MESSAGES}>
                                     <button className='user__image button'>
@@ -63,9 +104,9 @@ export const Layout: React.FC = ({children}) => {
                                                 </div>
                                             </div>
                                             <div className='notifications__content'>
-                                                {userData && userData.notifications.length
+                                                {!!userData
                                                     ? (<div className='notifications__list'>
-                                                        {userData && userData.notifications.map(item =>
+                                                        {notifications.map(item =>
                                                             <div className='notification-row' key={item.id}>
                                                                 <div className='notification-item'>
                                                                     <img className='notification-item__image'
@@ -90,6 +131,8 @@ export const Layout: React.FC = ({children}) => {
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                    <img className='notification-item__close-icon'
+                                                                         src={require('../../assets/images/close.svg').default}/>
                                                                 </div>
                                                             </div>)}
                                                     </div>)

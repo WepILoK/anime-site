@@ -148,10 +148,9 @@
                   transition: background 0.1s ease-in-out;
                   &:hover {
                     background-color: darken(#fff, 2%);
-                  }
-
-                  &:active {
-                    background-color: darken(#fff, 3%);
+                    .notification-item__close-icon {
+                      opacity: 1;
+                    }
                   }
 
                   &__image {
@@ -191,6 +190,19 @@
                     margin-left: 5px;
                     font-weight: 500;
                     border-bottom: 1px solid rgba(0, 0, 0, .16);
+                  }
+                  &__close-icon {
+                    position: absolute;
+                    right: 14px;
+                    transition: background 0.2s ease-in-out, opacity 0.3s ease-in-out;
+                    opacity: 0;
+                    &:hover {
+                      background-color: darken(#fff, 9%);
+                    }
+
+                    &:active {
+                      background-color: darken(#fff, 13%);
+                    }
                   }
                 }
               }

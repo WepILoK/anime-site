@@ -1,0 +1,39 @@
+.friends {
+  &__list {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    .friend {
+      position: relative;
+      padding: 6px;
+      margin: 4px;
+      text-align: center;
+      &__avatar {
+        cursor: pointer;
+        width: 130px;
+      }
+      &__username {
+        cursor: pointer;
+        margin-bottom: 4px;
+        font-weight: 600;
+      }
+      &__buttons {
+        display: flex;
+        flex-direction: column;
+        button {
+          margin-bottom: 4px;
+        }
+      }
+      .online_marker {
+        position: absolute;
+        top: 108px;
+        right: 43px;
+        border: 3px solid #FFFFFF;
+        background-color: #01c451;
+        border-radius: 50%;
+        height: 18px;
+        width: 18px;
+      }
+    }
+  }
+}

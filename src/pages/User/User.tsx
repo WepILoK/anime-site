@@ -9,6 +9,7 @@ import {useSelector} from "react-redux";
 import {selectIsAuth, selectUserData} from "../../store/ducks/user/selectors";
 import {Notifications} from "./components/Notifications/Notifications";
 import {Settings} from "./components/Settings/Settings";
+import {Friends} from "./components/Friends/Friends";
 
 
 export const User = () => {
@@ -27,9 +28,10 @@ export const User = () => {
             <div className='container'>
                 <div className='container__left-side'>
                     <Route path={UserRoutes.PROFILE} render={() => userData && <Profile {...userData}/>}/>
+                    <Route path={UserRoutes.MESSAGES} component={Chat}/>
+                    <Route path={UserRoutes.FRIENDS} component={Friends}/>
                     <Route path={UserRoutes.NOTIFICATIONS} component={Notifications}/>
                     <Route path={UserRoutes.SETTINGS} component={Settings}/>
-                    <Route path={UserRoutes.MESSAGES} component={Chat}/>
                 </div>
                 <div className='container__right-side'>
                     <Navbar/>

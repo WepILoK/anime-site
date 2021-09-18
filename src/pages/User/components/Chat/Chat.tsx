@@ -10,7 +10,7 @@ export const Chat = () => {
     const userData = useSelector(selectUserData)
     const chats = [
         {
-            id: '1',
+            id: '6138d105d349ad00160efca9',
             userName: "ZayacDmitry",
             avatar: "avatar.png",
             messages: [
@@ -19,11 +19,11 @@ export const Chat = () => {
                     message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolore dolorum eius est fugit illo, iure, modi, nam nihil quisquam reiciendis sit tempora totam unde velit vero voluptas voluptatem voluptatum!"
                 },
                 {
-                    id: '1',
+                    id: '6138d105d349ad00160efca9',
                     message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolore dolorum eius est fugit illo, iure, modi, nam nihil quisquam reiciendis sit tempora totam unde velit vero voluptas voluptatem voluptatum!"
                 },
                 {
-                    id: '1',
+                    id: '6138d105d349ad00160efca9',
                     message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolore dolorum eius est fugit illo, iure, modi, nam nihil quisquam reiciendis sit tempora totam unde velit vero voluptas voluptatem voluptatum!"
                 },
                 {
@@ -33,8 +33,8 @@ export const Chat = () => {
             ]
         },
         {
-            id: '2',
-            userName: "ZayacDmitry",
+            id: '6144eefdd8e569001661ae8c',
+            userName: "TestLogin",
             avatar: "avatar.png",
             messages: [
                 {
@@ -42,15 +42,19 @@ export const Chat = () => {
                     message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolore dolorum eius est fugit illo, iure, modi, nam nihil quisquam reiciendis sit tempora totam unde velit vero voluptas voluptatem voluptatum!"
                 },
                 {
-                    id: '1',
+                    id: '6144eefdd8e569001661ae8c',
                     message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolore dolorum eius est fugit illo, iure, modi, nam nihil quisquam reiciendis sit tempora totam unde velit vero voluptas voluptatem voluptatum!"
                 },
                 {
-                    id: '1',
+                    id: '6144eefdd8e569001661ae8c',
                     message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolore dolorum eius est fugit illo, iure, modi, nam nihil quisquam reiciendis sit tempora totam unde velit vero voluptas voluptatem voluptatum!"
                 },
                 {
                     id: userData?._id || '0',
+                    message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolore dolorum eius est fugit illo, iure, modi, nam nihil quisquam reiciendis sit tempora totam unde velit vero voluptas voluptatem voluptatum!"
+                },
+                {
+                    id: '6144eefdd8e569001661ae8c',
                     message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolore dolorum eius est fugit illo, iure, modi, nam nihil quisquam reiciendis sit tempora totam unde velit vero voluptas voluptatem voluptatum!"
                 }
             ]
